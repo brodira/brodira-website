@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BRODIRA – Start (Stitch)</title>
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#101a11">
+<script>document.documentElement.classList.add('js')</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--forest:#18271A;--forest-d:#101a11;--gold:#B8925A;--gold-l:#D4AE7A;--cream:#F4EDE3;
+--serif:'Cormorant Garamond',Georgia,serif;--sans:'DM Sans',system-ui,sans-serif;--mono:'DM Mono',monospace}
+*{box-sizing:border-box}html,body{margin:0}
+body{font-family:var(--sans);background:radial-gradient(120% 100% at 50% 0%,#1c2c1d,#101a11 70%);color:var(--cream);overflow-x:hidden}
+.topbar{position:absolute;top:0;left:0;right:0;z-index:5;display:flex;align-items:center;justify-content:space-between;padding:22px 28px}
+.brand{font-family:var(--serif);font-weight:600;font-size:23px;letter-spacing:.08em;color:var(--cream);text-decoration:none}
+.topbar .cta{font-size:14px;font-weight:600;color:var(--forest-d);background:var(--gold);padding:10px 18px;border-radius:999px;text-decoration:none}
+.hero{position:relative;min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:100px 24px 90px}
+.mono{width:min(210px,46vw);height:min(210px,46vw);margin-bottom:22px;cursor:pointer}
+.mono path,.mono circle{fill:none;stroke:var(--gold-l);stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+.mono .ring{stroke:var(--gold);stroke-width:2}
+.pill{display:inline-flex;align-items:center;gap:9px;font-family:var(--mono);font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-l);background:rgba(212,174,122,.1);border:1px solid rgba(212,174,122,.28);padding:8px 16px;border-radius:999px;margin-bottom:22px;opacity:0;animation:fade .8s 2.2s forwards}
+.pill .dot{width:6px;height:6px;border-radius:50%;background:var(--gold)}
+h1{font-family:var(--serif);font-weight:600;font-size:clamp(38px,6.4vw,78px);line-height:1.05;margin:0 0 18px;opacity:0;animation:fade .8s 2.4s forwards}
+h1 .g{color:var(--gold-l);font-style:italic}
+.sub{font-size:clamp(16px,1.7vw,20px);color:rgba(244,237,227,.82);max-width:32em;margin:0 auto 32px;opacity:0;animation:fade .8s 2.6s forwards}
+.cta-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;opacity:0;animation:fade .8s 2.75s forwards}
+.btn{font-weight:600;font-size:15.5px;padding:14px 26px;border-radius:999px;text-decoration:none;transition:.2s;cursor:pointer;border:none;font-family:var(--sans)}
+.btn-p{background:var(--gold);color:var(--forest-d)}.btn-p:hover{background:var(--gold-l)}
+.btn-g{border:1px solid rgba(244,237,227,.4);color:var(--cream);background:transparent}.btn-g:hover{border-color:var(--gold-l);color:var(--gold-l)}
+.replay{margin-top:20px;font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:rgba(244,237,227,.55);background:none;border:none;cursor:pointer;opacity:0;animation:fade .8s 2.9s forwards}
+.replay:hover{color:var(--gold-l)}
+@keyframes fade{to{opacity:1}}
+#thread{position:fixed;left:0;top:0;width:14px;height:14px;margin:-7px 0 0 -7px;border-radius:50%;pointer-events:none;z-index:60;
+  background:radial-gradient(circle,var(--gold-l),rgba(184,146,90,0));box-shadow:0 0 12px 2px rgba(212,174,122,.45);opacity:0;transition:opacity .3s}
+.next{background:var(--cream);color:var(--forest);text-align:center;padding:70px 24px}
+.next .eyebrow{font-family:var(--mono);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.next h2{font-family:var(--serif);font-weight:600;font-size:clamp(26px,3.4vw,40px);margin:8px 0 0}
+@media(prefers-reduced-motion:reduce){.mono path,.mono circle{stroke-dasharray:none!important;stroke-dashoffset:0!important}.pill,h1,.sub,.cta-row,.replay{animation:none;opacity:1}#thread{display:none}}
+</style>
+</head>
+<body>
+<div id="thread"></div>
+<div class="topbar"><a class="brand" href="index.html">BRODIRA</a><a class="cta" href="index.html#kontakt">Angebot anfordern</a></div>
+<section class="hero">
+  <svg class="mono" id="mono" viewBox="0 0 200 200" role="img" aria-label="BRODIRA Monogramm, das sich selbst stickt">
+    <circle class="ring" cx="100" cy="100" r="80"/>
+    <path d="M100 150 C100 120 100 95 100 60"/>
+    <path d="M100 122 C84 120 74 110 70 94 C88 96 98 106 100 122 Z"/>
+    <path d="M100 104 C116 102 126 92 130 76 C112 78 102 88 100 104 Z"/>
+    <path d="M100 84 C88 82 80 74 77 62 C90 64 98 72 100 84 Z"/>
+    <path d="M100 70 C112 68 120 60 123 48 C110 50 102 58 100 70 Z"/>
+  </svg>
+  <span class="pill"><span class="dot"></span> Stickerei-Manufaktur Karlsruhe · B2B</span>
+  <h1>Jeder Stich <span class="g">mit Bedacht.</span></h1>
+  <p class="sub">Personalisierte Stickerei für Ihr Geschäft – Logo & Namen auf GOTS-Bio-Baumwolle, gefertigt in Karlsruhe, geliefert in jeder Stückzahl.</p>
+  <div class="cta-row">
+    <a class="btn btn-p" href="index.html#kontakt">Konditionen anfragen</a>
+    <a class="btn btn-g" href="index.html#fertigung">Unsere Fertigung</a>
+  </div>
+  <button class="replay" id="replay">↻ Stickerei wiederholen</button>
+</section>
+<section class="next"><p class="eyebrow">Für Geschäftskunden</p><h2>Was wir für Sie besticken</h2></section>
+<script>
+(function(){
+  var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion:reduce)').matches;
+  var mono=document.getElementById('mono');
+  var strokes=[].slice.call(mono.querySelectorAll('path,circle'));
+  function prep(){strokes.forEach(function(p){var len=p.getTotalLength();p.style.transition='none';p.style.strokeDasharray=len;p.style.strokeDashoffset=len;});}
+  function draw(){if(reduce){strokes.forEach(function(p){p.style.strokeDashoffset=0;});return;}
+    prep();void mono.getBoundingClientRect();
+    strokes.forEach(function(p,i){var dur=i===0?1.6:0.6;p.style.transition='stroke-dashoffset '+dur+'s ease '+ (i*0.28)+'s';requestAnimationFrame(function(){p.style.strokeDashoffset=0;});});}
+  draw();
+  document.getElementById('replay').addEventListener('click',draw);
+  mono.addEventListener('mouseenter',draw);
+  // thread tip follows cursor
+  if(!reduce){var t=document.getElementById('thread'),x=0,y=0,cx=0,cy=0,raf=null,vis=false;
+    function loop(){cx+=(x-cx)*0.18;cy+=(y-cy)*0.18;t.style.transform='translate('+cx+'px,'+cy+'px)';if(Math.abs(x-cx)>0.2||Math.abs(y-cy)>0.2){raf=requestAnimationFrame(loop);}else{raf=null;}}
+    window.addEventListener('mousemove',function(e){x=e.clientX;y=e.clientY;if(!vis){vis=true;t.style.opacity=1;}if(!raf)raf=requestAnimationFrame(loop);});
+    window.addEventListener('mouseout',function(e){if(!e.relatedTarget){t.style.opacity=0;vis=false;}});}
+})();
+</script>
+</body>
+</html>
