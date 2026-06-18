@@ -191,6 +191,27 @@ footer .legal{margin-top:10px;opacity:.85}
 .js .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
 .js .reveal.in{opacity:1;transform:none}
 @media(prefers-reduced-motion:reduce){.js .reveal{opacity:1;transform:none}.needle,.thread-shimmer{animation:none}}
+/* staggered reveal inside grids */
+.js .prod-grid .reveal.in:nth-child(2){transition-delay:.08s}
+.js .prod-grid .reveal.in:nth-child(3){transition-delay:.16s}
+.js .prod-grid .reveal.in:nth-child(4){transition-delay:.24s}
+.js .cards .reveal.in:nth-child(2),.js .b2b-strip .reveal.in:nth-child(2){transition-delay:.08s}
+.js .cards .reveal.in:nth-child(3){transition-delay:.16s}
+.js .cards .reveal.in:nth-child(4){transition-delay:.24s}
+/* scroll progress bar */
+.scroll-progress{position:fixed;top:0;left:0;height:3px;width:0;z-index:200;background:linear-gradient(90deg,var(--gold),var(--gold-l));transition:width .08s linear}
+/* kinetic headline */
+.js h1.kinetic .w{display:inline-block;opacity:0;transform:translateY(26px);transition:opacity .55s cubic-bezier(.2,.7,.2,1),transform .55s cubic-bezier(.2,.7,.2,1)}
+.js h1.kinetic.in .w{opacity:1;transform:none}
+/* parallax media */
+.js .parallax{will-change:transform}
+/* auto-scrolling trust bar */
+.trust.marquee .wrap{flex-wrap:nowrap;justify-content:flex-start;overflow:hidden;gap:0;-webkit-mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent);mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent)}
+.trust.marquee .track{display:flex;flex:0 0 auto;gap:38px;padding-right:38px;white-space:nowrap;animation:trust-scroll 30s linear infinite}
+.trust.marquee .wrap:hover .track{animation-play-state:paused}
+.trust.marquee .track span{flex:0 0 auto}
+@keyframes trust-scroll{to{transform:translateX(-50%)}}
+@media(prefers-reduced-motion:reduce){.trust.marquee .track{animation:none}.js h1.kinetic .w{opacity:1;transform:none}.js .parallax{transform:none!important}}
 
 .mobile-cta{position:fixed;left:0;right:0;bottom:0;z-index:60;display:none;background:rgba(24,39,26,.96);backdrop-filter:blur(6px);padding:12px 16px;border-top:1px solid rgba(255,255,255,.12)}
 .mobile-cta a{display:block;text-align:center}
@@ -209,6 +230,7 @@ footer .legal{margin-top:10px;opacity:.85}
 </style>
 </head>
 <body>
+<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
 <a class="skip" href="#main">Zum Inhalt springen</a>
 
 <header>
@@ -233,7 +255,7 @@ footer .legal{margin-top:10px;opacity:.85}
   <div class="wrap hero-grid">
     <div class="reveal">
       <p class="eyebrow">B2B-Stickerei · Made in Karlsruhe</p>
-      <h1>Personalisierte Stickerei für Ihr Geschäft – in jeder Stückzahl.</h1>
+      <h1 class="kinetic">Personalisierte Stickerei für Ihr Geschäft – in jeder Stückzahl.</h1>
       <p class="lead">BRODIRA ist Ihr Partner für personalisierte Bio-Baumwoll-Stickerei – für Babyfachhandel, Kliniken, Hotels und Unternehmen. Logo &amp; Namen, gefertigt in Karlsruhe, geliefert in Mengen.</p>
       <div class="hero-cta">
         <a class="btn btn-primary" href="#kontakt">Konditionen anfragen</a>
@@ -241,17 +263,27 @@ footer .legal{margin-top:10px;opacity:.85}
       </div>
     </div>
     <div class="hero-img reveal">
-      <img src="assets/handtuch.webp" alt="Besticktes Kapuzenhandtuch mit Namen aus GOTS-Bio-Baumwolle von BRODIRA Karlsruhe" width="800" height="1000">
+      <img class="parallax" data-speed="14" src="assets/handtuch.webp" alt="Besticktes Kapuzenhandtuch mit Namen aus GOTS-Bio-Baumwolle von BRODIRA Karlsruhe" width="800" height="1000">
     </div>
   </div>
 </section>
 
-<div class="trust">
+<div class="trust marquee">
   <div class="wrap">
-    <span><b>✓</b> 100 % GOTS-Bio-Baumwolle</span>
-    <span><b>✓</b> Made in Karlsruhe</span>
-    <span><b>✓</b> 3–5 Werktage Lieferzeit</span>
-    <span><b>✓</b> Staffelpreise &amp; White-Label</span>
+    <div class="track">
+      <span><b>✓</b> 100 % GOTS-Bio-Baumwolle</span>
+      <span><b>✓</b> Made in Karlsruhe</span>
+      <span><b>✓</b> 3–5 Werktage Lieferzeit</span>
+      <span><b>✓</b> Staffelpreise &amp; White-Label</span>
+      <span><b>✓</b> Logo-Digitalisierung inklusive</span>
+      <span><b>✓</b> Musterservice vor der Serie</span>
+      <span aria-hidden="true"><b>✓</b> 100 % GOTS-Bio-Baumwolle</span>
+      <span aria-hidden="true"><b>✓</b> Made in Karlsruhe</span>
+      <span aria-hidden="true"><b>✓</b> 3–5 Werktage Lieferzeit</span>
+      <span aria-hidden="true"><b>✓</b> Staffelpreise &amp; White-Label</span>
+      <span aria-hidden="true"><b>✓</b> Logo-Digitalisierung inklusive</span>
+      <span aria-hidden="true"><b>✓</b> Musterservice vor der Serie</span>
+    </div>
   </div>
 </div>
 
@@ -330,7 +362,7 @@ footer .legal{margin-top:10px;opacity:.85}
 
     <div class="fert-grid">
       <div class="illu reveal">
-        <img src="assets/maschine.webp" alt="Mehrkopf-Stickmaschine bestickt ein goldenes Logo auf Bio-Baumwolle – Stickerei-Manufaktur BRODIRA Karlsruhe" loading="lazy" width="1000" height="1000">
+        <img class="parallax" data-speed="10" src="assets/maschine.webp" alt="Mehrkopf-Stickmaschine bestickt ein goldenes Logo auf Bio-Baumwolle – Stickerei-Manufaktur BRODIRA Karlsruhe" loading="lazy" width="1000" height="1000">
       </div>
       <div class="reveal">
         <h3 style="font-size:26px;margin-bottom:6px">Präzision in jeder Stückzahl.</h3>
@@ -356,7 +388,7 @@ footer .legal{margin-top:10px;opacity:.85}
         </div>
       </div>
       <div class="illu reveal" style="order:1">
-        <img src="assets/werkstatt.webp" alt="Stickerei-Werkstatt in Karlsruhe mit Garnkonen in Grün und Gold, Stickrahmen und gefalteten Bio-Textilien – BRODIRA Manufaktur" loading="lazy" width="1200" height="900">
+        <img class="parallax" data-speed="10" src="assets/werkstatt.webp" alt="Stickerei-Werkstatt in Karlsruhe mit Garnkonen in Grün und Gold, Stickrahmen und gefalteten Bio-Textilien – BRODIRA Manufaktur" loading="lazy" width="1200" height="900">
       </div>
     </div>
   </div>
@@ -470,6 +502,27 @@ footer .legal{margin-top:10px;opacity:.85}
 
 <script>
 document.getElementById('y').textContent=new Date().getFullYear();
+var REDUCE=window.matchMedia&&window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+/* kinetic headline: split into words, animate in */
+(function(){var h=document.querySelector('h1.kinetic');if(!h)return;if(REDUCE){h.classList.add('in');return;}
+  var words=h.textContent.trim().split(/\s+/);
+  h.textContent='';
+  words.forEach(function(w,i){var s=document.createElement('span');s.className='w';s.textContent=w;s.style.transitionDelay=(i*65)+'ms';h.appendChild(s);if(i<words.length-1)h.appendChild(document.createTextNode(' '));});
+  requestAnimationFrame(function(){requestAnimationFrame(function(){h.classList.add('in');});});
+  setTimeout(function(){h.classList.add('in');},1200);
+})();
+/* scroll progress + parallax */
+(function(){var bar=document.getElementById('scrollProgress');
+  var px=REDUCE?[]:[].slice.call(document.querySelectorAll('.parallax'));
+  var ticking=false;
+  function frame(){ticking=false;var vh=window.innerHeight;
+    if(bar){var max=document.documentElement.scrollHeight-vh;bar.style.width=(max>0?(window.scrollY/max*100):0)+'%';}
+    for(var i=0;i<px.length;i++){var el=px[i];var r=el.getBoundingClientRect();if(r.bottom<-80||r.top>vh+80)continue;var off=((r.top+r.height/2)-vh/2)/vh;var sp=parseFloat(el.getAttribute('data-speed')||'12');el.style.transform='translate3d(0,'+(off*-sp).toFixed(1)+'px,0) scale(1.06)';}
+  }
+  function onScroll(){if(!ticking){ticking=true;requestAnimationFrame(frame);}}
+  window.addEventListener('scroll',onScroll,{passive:true});
+  window.addEventListener('resize',onScroll);frame();
+})();
 var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');if(e.target.classList.contains('stat'))countUp(e.target);io.unobserve(e.target);}});},{threshold:.18});
 document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
 setTimeout(function(){document.querySelectorAll('.reveal').forEach(function(el){if(!el.classList.contains('in')){el.classList.add('in');if(el.classList.contains('stat'))countUp(el);}});},1600);
