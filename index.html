@@ -17,11 +17,12 @@
 <meta property="og:title" content="Stickerei Karlsruhe für Firmen – Logo & Namen besticken | BRODIRA">
 <meta property="og:description" content="Personalisierte Bio-Baumwoll-Stickerei aus Karlsruhe für Babyfachhandel, Kliniken, Hotels und Unternehmen. Logo & Namen, Staffelpreise, schnelle Lieferung.">
 <meta property="og:url" content="https://www.brodira.de/">
-<meta property="og:image" content="https://www.brodira.de/assets/handtuch.webp">
+<meta property="og:image" content="https://www.brodira.de/assets/maschine.webp">
 <meta name="twitter:card" content="summary_large_image">
 
 <link rel="icon" type="image/png" href="assets/icon-1024.png">
 <link rel="apple-touch-icon" href="assets/icon-1024.png">
+<link rel="preload" as="image" href="assets/maschine.webp" fetchpriority="high">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -36,7 +37,7 @@
   "alternateName": "BRODIRA Stickerei-Manufaktur",
   "description": "Stickerei-Manufaktur aus Karlsruhe für Geschäftskunden: personalisierte Stickerei mit Logo und Namen auf 100 % GOTS-zertifizierter Bio-Baumwolle.",
   "url": "https://www.brodira.de/",
-  "image": "https://www.brodira.de/assets/handtuch.webp",
+  "image": "https://www.brodira.de/assets/maschine.webp",
   "logo": "https://www.brodira.de/assets/icon-1024.png",
   "telephone": "+4915751203771",
   "email": "info@brodira.de",
@@ -222,6 +223,25 @@ footer .legal{margin-top:10px;opacity:.85}
 
 .mobile-cta{position:fixed;left:0;right:0;bottom:0;z-index:60;display:none;background:rgba(24,39,26,.96);backdrop-filter:blur(6px);padding:12px 16px;border-top:1px solid rgba(255,255,255,.12)}
 .mobile-cta a{display:block;text-align:center}
+.qform{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:18px}
+.qform .full{grid-column:1/-1}
+.qform label{display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:rgba(244,237,227,.7);margin:0 0 5px}
+.qform input,.qform select,.qform textarea{width:100%;font-family:var(--sans);font-size:15px;padding:11px 13px;border-radius:10px;border:1px solid rgba(244,237,227,.28);background:rgba(255,255,255,.06);color:var(--cream);outline:none}
+.qform input:focus,.qform select:focus,.qform textarea:focus{border-color:var(--gold-l);background:rgba(255,255,255,.1)}
+.qform input::placeholder,.qform textarea::placeholder{color:rgba(244,237,227,.45)}
+.qform select option{color:#1c1c1c}
+.qform textarea{min-height:84px;resize:vertical}
+.qform .btn{grid-column:1/-1;cursor:pointer;border:none;font-size:15.5px}
+.qform .hint{grid-column:1/-1;font-size:12.5px;color:rgba(244,237,227,.6);margin:2px 0 0}
+a.card-link{text-decoration:none;color:inherit;display:block}
+.card-link .more{display:inline-block;margin-top:12px;font-family:var(--mono);font-size:11px;letter-spacing:.08em;color:var(--gold);opacity:.85;transition:.2s}
+.card-link:hover .more{opacity:1;transform:translateX(2px)}
+.fnav{margin:14px 0 4px;font-size:14px}
+.fnav a{color:#d8ccbb;text-decoration:none;margin:0 4px;opacity:.85}
+.fnav a:hover{color:var(--gold-l);opacity:1}
+.svc-links{margin-top:18px;font-size:15px}
+.svc-links a{color:var(--gold);text-decoration:none;font-weight:600}
+.svc-links a:hover{text-decoration:underline}
 
 @media(max-width:860px){
   .nav-links{display:none}
@@ -271,7 +291,7 @@ footer .legal{margin-top:10px;opacity:.85}
       </div>
     </div>
     <div class="hero-img reveal">
-      <img class="parallax" data-speed="14" src="assets/maschine.webp" alt="Mehrkopf-Stickmaschine bestickt ein goldenes Logo auf Bio-Baumwolle – BRODIRA Stickerei-Manufaktur Karlsruhe" width="1000" height="1000">
+      <img class="parallax" data-speed="14" fetchpriority="high" src="assets/maschine.webp" alt="Mehrkopf-Stickmaschine bestickt ein goldenes Logo auf Bio-Baumwolle – BRODIRA Stickerei-Manufaktur Karlsruhe" width="1000" height="1000">
     </div>
   </div>
 </section>
@@ -305,6 +325,7 @@ footer .legal{margin-top:10px;opacity:.85}
       <div class="card reveal"><h3>Staffelpreise &amp; Großhandel</h3><p>Attraktive Konditionen ab der ersten Mengenbestellung – transparent, planbar und fair kalkuliert.</p><div class="tag">Mengenrabatt</div></div>
       <div class="card reveal"><h3>Namen, Logos &amp; White-Label</h3><p>Personalisierung mit Namen oder Ihrem Logo. Auf Wunsch neutrale Lieferung direkt an Ihre Kunden.</p><div class="tag">Auch White-Label</div></div>
     </div>
+    <p class="svc-links reveal">Mehr dazu: <a href="logo-stickerei.html">Logo besticken lassen</a> · <a href="stickerei-karlsruhe.html">Stickerei Karlsruhe</a></p>
   </div>
 </section>
 
@@ -314,10 +335,10 @@ footer .legal{margin-top:10px;opacity:.85}
     <h2 class="reveal">Für wen wir arbeiten</h2>
     <p class="lead-2 reveal">Gemacht für Unternehmen, die Wert auf Details legen – vom Einzelstück bis zur wiederkehrenden Serie.</p>
     <div class="grid-4">
-      <div class="card reveal"><h3>Babyfachhandel &amp; Boutiquen</h3><p>Personalisierte Sortimente, die sich von der Stange abheben – als feste Linie oder saisonale Aktion.</p></div>
-      <div class="card reveal"><h3>Hebammen, Kliniken &amp; Praxen</h3><p>Willkommensgeschenke zur Geburt, bestickt mit Namen – in Ihrer Handschrift und Ihrem Anspruch.</p></div>
-      <div class="card reveal"><h3>Unternehmen &amp; Personal</h3><p>Hochwertige, persönliche Geschenke zur Geburt für Mitarbeitende – ein Detail, das in Erinnerung bleibt.</p></div>
-      <div class="card reveal"><h3>Hotels, Manufakturen &amp; Kitas</h3><p>Bestickte Textilien mit Ihrem Namen oder Logo – in gleichbleibender Qualität, auch bei Nachbestellung.</p></div>
+      <a class="card card-link reveal" href="babyfachhandel.html"><h3>Babyfachhandel &amp; Boutiquen</h3><p>Personalisierte Sortimente, die sich von der Stange abheben – als feste Linie oder saisonale Aktion.</p><span class="more">Mehr erfahren →</span></a>
+      <a class="card card-link reveal" href="kliniken-hebammen.html"><h3>Hebammen, Kliniken &amp; Praxen</h3><p>Willkommensgeschenke zur Geburt, bestickt mit Namen – in Ihrer Handschrift und Ihrem Anspruch.</p><span class="more">Mehr erfahren →</span></a>
+      <a class="card card-link reveal" href="unternehmen.html"><h3>Unternehmen &amp; Personal</h3><p>Hochwertige, persönliche Geschenke und Corporate Wear für Mitarbeitende – ein Detail, das bleibt.</p><span class="more">Mehr erfahren →</span></a>
+      <a class="card card-link reveal" href="hotels.html"><h3>Hotels, Manufakturen &amp; Kitas</h3><p>Bestickte Textilien mit Ihrem Namen oder Logo – in gleichbleibender Qualität, auch bei Nachbestellung.</p><span class="more">Mehr erfahren →</span></a>
     </div>
   </div>
 </section>
@@ -488,8 +509,27 @@ footer .legal{margin-top:10px;opacity:.85}
     <div class="reveal">
       <p class="eyebrow">Kontakt</p>
       <h2>Lassen Sie uns über Ihr Projekt sprechen.</h2>
-      <p class="lead-2">Sie haben Bedarf an personalisierter Stickerei in Stückzahl? Schreiben Sie uns – wir melden uns kurzfristig mit einem Angebot und auf Wunsch einem Muster.</p>
-      <a class="btn btn-primary" href="mailto:info@brodira.de?subject=Anfrage%20Stickerei%20BRODIRA" style="margin-top:8px">Angebot anfordern</a>
+      <p class="lead-2">Beschreiben Sie kurz Ihr Vorhaben – wir melden uns in der Regel innerhalb eines Werktags mit einem Angebot und auf Wunsch einem Muster.</p>
+      <form class="qform" id="quoteForm" aria-label="Angebot anfordern">
+        <div><label for="qf-firma">Firma</label><input id="qf-firma" name="firma" type="text" placeholder="Ihr Unternehmen"></div>
+        <div><label for="qf-name">Name</label><input id="qf-name" name="name" type="text" placeholder="Ansprechpartner"></div>
+        <div><label for="qf-mail">E-Mail</label><input id="qf-mail" name="email" type="email" placeholder="name@firma.de"></div>
+        <div><label for="qf-menge">Stückzahl</label><input id="qf-menge" name="menge" type="text" placeholder="z. B. 50"></div>
+        <div class="full"><label for="qf-textil">Textil / Leistung</label>
+          <select id="qf-textil" name="textil">
+            <option>Logo-Stickerei (Corporate Wear)</option>
+            <option>Polo-Shirts</option>
+            <option>Business-Hemden</option>
+            <option>Caps / Bucket Hats</option>
+            <option>Taschen / Tote Bags</option>
+            <option>Babytextilien</option>
+            <option>Andere / weiß ich noch nicht</option>
+          </select>
+        </div>
+        <div class="full"><label for="qf-msg">Nachricht</label><textarea id="qf-msg" name="nachricht" placeholder="Motiv, Wunschtermin, Fragen …"></textarea></div>
+        <button class="btn btn-primary" type="submit">Angebot anfordern</button>
+        <p class="hint">Mit dem Absenden öffnet sich Ihr E-Mail-Programm mit der vorausgefüllten Anfrage an info@brodira.de. Alternativ direkt an <a href="mailto:info@brodira.de" style="color:var(--gold-l)">info@brodira.de</a>.</p>
+      </form>
     </div>
     <div class="contact-card reveal">
       <h3 style="color:var(--forest)">BRODIRA Stickerei-Manufaktur</h3>
@@ -507,6 +547,14 @@ footer .legal{margin-top:10px;opacity:.85}
 <footer>
   <div class="wrap">
     <div class="fbrand">BRODIRA</div>
+    <nav class="fnav" aria-label="Seiten">
+      <a href="stickerei-karlsruhe.html">Stickerei Karlsruhe</a> ·
+      <a href="logo-stickerei.html">Logo-Stickerei</a> ·
+      <a href="babyfachhandel.html">Babyfachhandel</a> ·
+      <a href="kliniken-hebammen.html">Kliniken &amp; Hebammen</a> ·
+      <a href="unternehmen.html">Unternehmen</a> ·
+      <a href="hotels.html">Hotels</a>
+    </nav>
     <div>Auer Str. 48 A, 76227 Karlsruhe · <a href="tel:+4915751203771">+49 157 51203771</a> · <a href="mailto:info@brodira.de">info@brodira.de</a></div>
     <div class="legal">© <span id="y"></span> BRODIRA · <a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutzerklärung</a></div>
   </div>
@@ -541,6 +589,13 @@ var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isInter
 document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
 setTimeout(function(){document.querySelectorAll('.reveal').forEach(function(el){if(!el.classList.contains('in')){el.classList.add('in');if(el.classList.contains('stat'))countUp(el);}});},1600);
 function countUp(stat){var el=stat.querySelector('.num');if(!el||el.dataset.static)return;var target=+el.dataset.count,pre=el.dataset.prefix||'',suf=el.dataset.suffix||'',t0=null;function step(ts){if(!t0)t0=ts;var p=Math.min((ts-t0)/900,1);el.textContent=pre+Math.round(p*target)+suf;if(p<1)requestAnimationFrame(step);}requestAnimationFrame(step);}
+var qf=document.getElementById('quoteForm');
+if(qf){qf.addEventListener('submit',function(e){e.preventDefault();
+  function v(id){var el=document.getElementById(id);return el?el.value.trim():'';}
+  var firma=v('qf-firma'),subj='Angebot-Anfrage'+(firma?' – '+firma:'')+' (BRODIRA)';
+  var body='Firma: '+firma+'\nName: '+v('qf-name')+'\nE-Mail: '+v('qf-mail')+'\nStückzahl: '+v('qf-menge')+'\nTextil/Leistung: '+v('qf-textil')+'\n\nNachricht:\n'+v('qf-msg')+'\n';
+  window.location.href='mailto:info@brodira.de?subject='+encodeURIComponent(subj)+'&body='+encodeURIComponent(body);
+});}
 </script>
 </body>
 </html>

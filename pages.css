@@ -1,0 +1,47 @@
+:root{--forest:#18271A;--forest-d:#101a11;--gold:#B8925A;--gold-l:#D4AE7A;--cream:#F4EDE3;--warm:#FAF7F3;--muted:#5b5247;--char:#1c1c1c;
+--serif:'Cormorant Garamond',Georgia,serif;--sans:'DM Sans',system-ui,sans-serif;--mono:'DM Mono',monospace}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:var(--sans);background:var(--warm);color:var(--char);font-size:16.5px;line-height:1.65}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+a{color:var(--gold)}
+.skip{position:absolute;left:-999px}.skip:focus{left:8px;top:8px;background:#fff;padding:8px;z-index:99}
+header{position:sticky;top:0;z-index:50;background:rgba(250,247,243,.92);backdrop-filter:blur(8px);border-bottom:1px solid #ece2d3}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand .bmark{width:34px;height:34px;border-radius:8px;background:var(--forest);color:var(--gold-l);font-family:var(--serif);font-weight:600;font-size:20px;display:flex;align-items:center;justify-content:center}
+.brand .bname{font-family:var(--serif);font-weight:600;font-size:22px;letter-spacing:.08em;color:var(--forest)}
+.nav-links{display:flex;gap:24px;align-items:center}
+.nav-links a{font-size:15px;text-decoration:none;color:var(--char);opacity:.85}
+.nav-links a:hover{opacity:1;color:var(--gold)}
+.btn{display:inline-block;font-weight:600;font-size:15px;padding:12px 22px;border-radius:999px;text-decoration:none;transition:.2s;border:none;cursor:pointer;font-family:var(--sans)}
+.btn-primary{background:var(--gold);color:#fff}.btn-primary:hover{background:#a37f48}
+.btn-ghost{border:1px solid rgba(24,39,26,.28);color:var(--forest)}.btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
+.crumb{font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;color:var(--muted);padding:16px 0 0}
+.crumb a{color:var(--muted);text-decoration:none}.crumb a:hover{color:var(--gold)}
+.hero{padding:30px 0 18px}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin:0}
+h1{font-family:var(--serif);font-weight:600;color:var(--forest);font-size:clamp(32px,5vw,54px);line-height:1.04;margin:10px 0 14px}
+.lead{font-size:19px;color:var(--muted);max-width:40em;margin:0 0 22px}
+section{padding:34px 0}
+h2{font-family:var(--serif);font-weight:600;color:var(--forest);font-size:clamp(24px,3.4vw,36px);margin:0 0 10px;line-height:1.08}
+h3{font-family:var(--serif);font-weight:600;color:var(--forest);font-size:21px;margin:0 0 6px}
+p{margin:8px 0}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:22px}
+.card{background:#fff;border:1px solid #ece2d3;border-radius:14px;padding:22px}
+.card p{color:var(--muted);font-size:15px;margin:6px 0 0}
+.tag{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-top:10px;display:inline-block}
+ul.checks{list-style:none;padding:0;margin:18px 0}
+ul.checks li{padding:11px 0;border-bottom:1px solid #e3d8c8;font-size:16px;color:#2c2a26;padding-left:26px;position:relative}
+ul.checks li:before{content:"✓";position:absolute;left:0;color:var(--gold);font-weight:700}
+.cta-band{background:var(--forest);color:var(--cream);border-radius:18px;padding:34px 28px;margin:30px 0;text-align:center}
+.cta-band h2{color:var(--cream)}
+.cta-band p{color:rgba(244,237,227,.82);max-width:36em;margin:8px auto 18px}
+.faq details{border-bottom:1px solid #e3d8c8;padding:14px 0}
+.faq summary{font-family:var(--serif);font-size:20px;color:var(--forest);cursor:pointer;list-style:none}
+.faq summary::-webkit-details-marker{display:none}
+.faq p{color:var(--muted);font-size:15.5px;margin-top:8px}
+footer{background:var(--forest);color:#d8ccbb;text-align:center;padding:40px 0;font-size:14px;margin-top:20px}
+footer a{color:var(--gold-l);text-decoration:none}
+.fbrand{font-family:var(--serif);font-weight:600;letter-spacing:.14em;font-size:24px;color:var(--cream);margin-bottom:8px}
+.fnav{margin:12px 0;font-size:14px}.fnav a{margin:0 4px;opacity:.85}.fnav a:hover{opacity:1}
+.legal{margin-top:10px;opacity:.85}
+@media(max-width:760px){.nav-links{display:none}.grid{grid-template-columns:1fr}}
