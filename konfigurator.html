@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BRODIRA – Konfigurator (Vorschau)</title>
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#FAF7F3">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600&family=Parisienne&display=swap" rel="stylesheet">
+<style>
+:root{--forest:#18271A;--gold:#B8925A;--gold-l:#D4AE7A;--cream:#F4EDE3;--warm:#FAF7F3;--muted:#5b5247;
+--serif:'Cormorant Garamond',Georgia,serif;--sans:'DM Sans',system-ui,sans-serif;--mono:'DM Mono',monospace;--script:'Parisienne',cursive}
+*{box-sizing:border-box}html,body{margin:0}
+body{font-family:var(--sans);background:var(--warm);color:#1c1c1c}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+section{padding:70px 0 90px}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin:0}
+h2{font-family:var(--serif);font-weight:600;color:var(--forest);font-size:clamp(30px,4.4vw,48px);line-height:1.05;margin:8px 0 6px}
+.lead{font-size:18px;color:var(--muted);max-width:34em;margin:0 0 34px}
+.config{display:grid;grid-template-columns:1.05fr .95fr;gap:42px;align-items:center}
+/* stage */
+.stage{position:relative;border-radius:20px;overflow:hidden;background:linear-gradient(160deg,#fbf7f1,#eee0cd);border:1px solid #ece2d3;box-shadow:0 26px 56px -34px rgba(24,39,26,.5)}
+.stage .pimg{display:block;width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;transition:opacity .35s ease}
+.stitch{position:absolute;font-family:var(--script);line-height:1;white-space:nowrap;pointer-events:none;
+  text-shadow:0 1px 0 rgba(0,0,0,.18);transition:color .25s,transform .25s,top .35s,left .35s,font-size .35s;transform:translate(-50%,-50%) rotate(-1deg)}
+.stitch.pop{animation:pop .3s ease}
+@keyframes pop{0%{transform:translate(-50%,-50%) scale(.94) rotate(-1deg)}100%{transform:translate(-50%,-50%) scale(1) rotate(-1deg)}}
+.stage .badge{position:absolute;top:14px;left:14px;font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--forest);background:rgba(255,255,255,.82);padding:6px 11px;border-radius:999px}
+/* controls */
+.ctl{display:flex;flex-direction:column;gap:24px}
+.row label{display:block;font-family:var(--mono);font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+.tabs{display:flex;gap:10px;flex-wrap:wrap}
+.tab{font-family:var(--sans);font-size:15px;font-weight:600;padding:11px 18px;border-radius:12px;border:1px solid #e0d3bf;background:#fff;color:var(--forest);cursor:pointer;transition:.18s}
+.tab[aria-selected="true"]{background:var(--forest);color:var(--cream);border-color:var(--forest)}
+.swatches{display:flex;gap:12px;flex-wrap:wrap}
+.sw{width:38px;height:38px;border-radius:50%;cursor:pointer;border:2px solid rgba(0,0,0,.08);box-shadow:0 2px 6px rgba(0,0,0,.12);position:relative;transition:transform .15s}
+.sw:hover{transform:scale(1.08)}
+.sw[aria-pressed="true"]{outline:2px solid var(--gold);outline-offset:3px}
+.field input{font-family:var(--sans);font-size:16px;padding:13px 16px;border-radius:12px;border:1px solid #e0d3bf;background:#fff;color:#1c1c1c;width:100%;max-width:320px;outline:none}
+.field input:focus{border-color:var(--gold)}
+.note{font-size:13.5px;color:var(--muted);max-width:32em}
+.cta-row{display:flex;gap:14px;flex-wrap:wrap;margin-top:4px}
+.btn{font-weight:600;font-size:15.5px;padding:14px 24px;border-radius:999px;text-decoration:none;transition:.2s;border:none;cursor:pointer;font-family:var(--sans)}
+.btn-p{background:var(--gold);color:#fff}.btn-p:hover{background:#a37f48}
+.btn-g{border:1px solid rgba(24,39,26,.28);color:var(--forest);background:transparent}.btn-g:hover{border-color:var(--gold);color:var(--gold)}
+@media(max-width:880px){.config{grid-template-columns:1fr;gap:28px}}
+</style>
+</head>
+<body>
+<section>
+  <div class="wrap">
+    <p class="eyebrow">Textil-Konfigurator</p>
+    <h2>Gestalten Sie Ihr Textil.</h2>
+    <p class="lead">Wählen Sie Textil und Garnfarbe, geben Sie Ihren Schriftzug ein – und sehen Sie die Stickerei live. So einfach starten Ihre personalisierten Serien.</p>
+
+    <div class="config">
+      <div class="stage">
+        <span class="badge" id="badge">Business-Hemd · Russell</span>
+        <img class="pimg" id="pimg" src="assets/hemd.webp" alt="Vorschau Textil">
+        <div class="stitch" id="stitch">Lena</div>
+      </div>
+
+      <div class="ctl">
+        <div class="row">
+          <label>1 · Textil wählen</label>
+          <div class="tabs" id="tabs" role="tablist">
+            <button class="tab" role="tab" aria-selected="true" data-prod="hemd">Business-Hemd</button>
+            <button class="tab" role="tab" aria-selected="false" data-prod="polo">Polo-Shirt</button>
+          </div>
+        </div>
+        <div class="row">
+          <label>2 · Garnfarbe</label>
+          <div class="swatches" id="swatches">
+            <button class="sw" aria-pressed="true"  title="Gold"     data-color="#B8925A" style="background:#B8925A"></button>
+            <button class="sw" aria-pressed="false" title="Waldgrün" data-color="#1f3a22" style="background:#1f3a22"></button>
+            <button class="sw" aria-pressed="false" title="Marine"   data-color="#22324f" style="background:#22324f"></button>
+            <button class="sw" aria-pressed="false" title="Weiß"     data-color="#f4ede3" style="background:#f4ede3"></button>
+            <button class="sw" aria-pressed="false" title="Altrosa"  data-color="#b07a86" style="background:#b07a86"></button>
+          </div>
+        </div>
+        <div class="row field">
+          <label>3 · Schriftzug</label>
+          <input id="nameInput" type="text" maxlength="16" value="Lena" placeholder="Name oder Marke" aria-label="Schriftzug">
+        </div>
+        <p class="note">Live-Vorschau – die finale Stickposition und Garnstärke stimmen wir vor der Serie mit Ihnen ab (Musterfreigabe inklusive).</p>
+        <div class="cta-row">
+          <a class="btn btn-p" href="index.html#kontakt">Angebot anfordern</a>
+          <a class="btn btn-g" href="index.html#fertigung">Unsere Fertigung</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+(function(){
+  var PRODUCTS={
+    hemd:{img:'assets/hemd.webp',badge:'Business-Hemd · Russell',top:42,left:50,size:7.5},
+    polo:{img:'assets/polo.webp',badge:'Polo-Shirt · Stanley/Stella',top:39,left:50,size:7}
+  };
+  var state={prod:'hemd',color:'#B8925A',name:'Lena'};
+  var pimg=document.getElementById('pimg'),badge=document.getElementById('badge'),stitch=document.getElementById('stitch');
+  function render(){
+    var p=PRODUCTS[state.prod];
+    if(pimg.getAttribute('src')!==p.img){pimg.style.opacity=0;setTimeout(function(){pimg.src=p.img;pimg.onload=function(){pimg.style.opacity=1;};},180);}
+    badge.textContent=p.badge;
+    stitch.style.top=p.top+'%';stitch.style.left=p.left+'%';
+    stitch.style.fontSize='clamp(22px,'+p.size+'vw,'+(p.size*8)+'px)';
+    stitch.style.color=state.color;
+    stitch.textContent=state.name||'Ihr Name';
+    stitch.classList.remove('pop');void stitch.offsetWidth;stitch.classList.add('pop');
+  }
+  document.getElementById('tabs').addEventListener('click',function(e){var b=e.target.closest('.tab');if(!b)return;
+    [].forEach.call(this.querySelectorAll('.tab'),function(t){t.setAttribute('aria-selected',t===b);});
+    state.prod=b.getAttribute('data-prod');render();});
+  document.getElementById('swatches').addEventListener('click',function(e){var b=e.target.closest('.sw');if(!b)return;
+    [].forEach.call(this.querySelectorAll('.sw'),function(s){s.setAttribute('aria-pressed',s===b);});
+    state.color=b.getAttribute('data-color');render();});
+  document.getElementById('nameInput').addEventListener('input',function(){state.name=this.value.slice(0,16);render();});
+  render();
+})();
+</script>
+</body>
+</html>
