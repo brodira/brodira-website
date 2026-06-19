@@ -132,11 +132,11 @@ section{padding:78px 0}
 .gal figure:hover img{transform:scale(1.06)}
 .gal figcaption{position:absolute;left:0;right:0;bottom:0;padding:10px 14px;font-size:13.5px;color:#fff;background:linear-gradient(transparent,rgba(24,39,26,.72))}
 .brandwall{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin-top:36px}
-.brandwall .bl{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;min-height:104px;padding:16px 12px;border:1px solid #e6dac8;border-radius:14px;background:var(--warm);transition:.2s}
+.brandwall .bl{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;min-height:108px;padding:18px 14px;border:1px solid #e6dac8;border-radius:14px;background:#fff;transition:.2s}
 .brandwall .bl:hover{border-color:var(--gold-l);transform:translateY(-3px);box-shadow:0 16px 32px -24px rgba(24,39,26,.4)}
-.brandwall .bl .nm{font-family:var(--serif);font-weight:600;font-size:clamp(17px,2vw,23px);letter-spacing:.02em;color:#7c7669;transition:color .2s;line-height:1.05}
-.brandwall .bl:hover .nm{color:var(--forest)}
-.brandwall .bl small{display:block;font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-top:8px}
+.brandwall .bl img.blogo{max-width:128px;max-height:46px;width:auto;height:auto;object-fit:contain;filter:grayscale(1);opacity:.72;transition:.25s}
+.brandwall .bl:hover img.blogo{filter:none;opacity:1}
+.brandwall .bl small{display:block;font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-top:12px}
 @media(max-width:860px){.brandwall{grid-template-columns:repeat(2,1fr)}}
 .prod-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:34px}
 .prod-card{background:var(--warm);border:1px solid #ece2d3;border-radius:16px;overflow:hidden;transition:.2s;display:flex;flex-direction:column}
@@ -429,17 +429,17 @@ a.card-link{text-decoration:none;color:inherit;display:block}
     <h2 class="reveal">Wir veredeln führende Marken.</h2>
     <p class="lead-2 reveal">Hochwertige Blanks renommierter Hersteller, zertifizierte Bio-Qualität und professionelle Maschinenstickerei – die Basis für Ihre Serien.</p>
     <div class="brandwall reveal">
-      <div class="bl"><span class="nm">Stanley/Stella</span><small>Bio-Baumwolle</small></div>
-      <div class="bl"><span class="nm">Russell</span><small>Corporate Wear</small></div>
-      <div class="bl"><span class="nm">SOL'S</span><small>Promotion &amp; Workwear</small></div>
-      <div class="bl"><span class="nm">Larkwood</span><small>Baby &amp; Kinder</small></div>
-      <div class="bl"><span class="nm">Babybugz</span><small>Bio-Baby</small></div>
-      <div class="bl"><span class="nm">Jollein</span><small>Nursery &amp; Decken</small></div>
-      <div class="bl"><span class="nm">Result</span><small>Jacken &amp; Caps</small></div>
-      <div class="bl"><span class="nm">Madeira</span><small>Premium-Stickgarn</small></div>
-      <div class="bl"><span class="nm">GOTS</span><small>Zertifiziert</small></div>
-      <div class="bl"><span class="nm">OEKO-TEX®</span><small>Schadstoffgeprüft</small></div>
-      <div class="bl"><span class="nm">Brother</span><small>Stickmaschine</small></div>
+      <div class="bl"><img class="blogo" src="assets/logo-stanleystella.webp" alt="Stanley/Stella Logo" loading="lazy"><small>Bio-Baumwolle</small></div>
+      <div class="bl"><img class="blogo" src="assets/logo-russell.webp" alt="Russell Logo" loading="lazy"><small>Corporate Wear</small></div>
+      <div class="bl"><img class="blogo" src="assets/logo-sols.webp" alt="SOL'S Logo" loading="lazy"><small>Promotion &amp; Workwear</small></div>
+      <div class="bl"><img class="blogo" src="assets/logo-larkwood.webp" alt="Larkwood Logo" loading="lazy"><small>Baby &amp; Kinder</small></div>
+      <div class="bl"><img class="blogo" src="assets/logo-babybugz.webp" alt="BabyBugz Logo" loading="lazy"><small>Bio-Baby</small></div>
+      <div class="bl"><img class="blogo" src="assets/logo-jollein.webp" alt="Jollein Logo" loading="lazy"><small>Nursery &amp; Decken</small></div>
+      <div class="bl"><img class="blogo" src="assets/logo-result.webp" alt="Result Logo" loading="lazy"><small>Jacken &amp; Caps</small></div>
+      <div class="bl"><img class="blogo" src="assets/logo-madeira.webp" alt="Madeira Stickgarn Logo" loading="lazy"><small>Premium-Stickgarn</small></div>
+      <div class="bl"><img class="blogo" src="assets/logo-gots.webp" alt="GOTS Global Organic Textile Standard Logo" loading="lazy"><small>Zertifiziert</small></div>
+      <div class="bl"><img class="blogo" src="assets/logo-oekotex.webp" alt="OEKO-TEX Logo" loading="lazy"><small>Schadstoffgeprüft</small></div>
+      <div class="bl"><img class="blogo" src="assets/logo-brother.webp" alt="Brother Stickmaschine Logo" loading="lazy"><small>Stickmaschine</small></div>
     </div>
     <p class="reveal" style="margin-top:22px;color:var(--muted);font-size:14.5px">Weitere Marken und Blanks auf Anfrage – sagen Sie uns einfach, welches Textil Sie veredeln möchten.</p>
   </div>
