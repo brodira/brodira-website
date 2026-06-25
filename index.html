@@ -351,6 +351,7 @@
   @media(max-width:980px){.scene{min-height:440px;order:-1}.deck{width:min(380px,82vw);height:420px}}
   @media(max-width:620px){.deck{width:300px;height:360px}}
   @media(prefers-reduced-motion:reduce){.deck,.scene .contour{transform:none!important;transition:none}}
+@media(max-width:980px){.nav-links{display:flex;position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;background:var(--paper);border-bottom:1px solid var(--hair);padding:6px 28px 16px;opacity:0;transform:translateY(-8px);pointer-events:none;transition:opacity .2s,transform .2s;z-index:40}.nav-links.open{opacity:1;transform:none;pointer-events:auto}.nav-links a{padding:13px 0;border-bottom:1px solid var(--hair);font-size:1.05rem;color:var(--ink)}}
 </style>
 </head>
 <body>
@@ -701,5 +702,6 @@
   },{passive:true});
 })();
 </script>
+<script>(function(){var b=document.querySelector('.burger'),n=document.querySelector('.nav-links');if(b&&n){b.addEventListener('click',function(){n.classList.toggle('open');});n.addEventListener('click',function(e){if(e.target.closest('a'))n.classList.remove('open');});}})();</script>
 </body>
 </html>

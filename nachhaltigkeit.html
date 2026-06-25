@@ -44,7 +44,7 @@
       <a href="index.html#sortiment">Textilien</a>
       <a href="index.html#kontakt">Kontakt</a>
     </nav>
-  <div class="nav-right"><a class="lang" href="en/nachhaltigkeit.html" hreflang="en" lang="en" aria-label="English version">EN</a><a class="btn btn-primary" href="index.html#kontakt">Angebot anfordern</a></div>
+  <div class="nav-right"><button class="burger" aria-label="Menü" type="button">☰</button><a class="lang" href="en/nachhaltigkeit.html" hreflang="en" lang="en" aria-label="English version">EN</a><a class="btn btn-primary" href="index.html#kontakt">Angebot anfordern</a></div>
 </div></header>
 <main id="main">
 <div class="wrap">
@@ -78,5 +78,6 @@
   <div class="legal">© <span id="y"></span> BRODIRA · <a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutzerklärung</a></div>
 </div></footer>
 <script>document.getElementById('y').textContent=new Date().getFullYear();</script>
+<script>(function(){var b=document.querySelector('.burger'),n=document.querySelector('.nav-links');if(b&&n){b.addEventListener('click',function(){n.classList.toggle('open')});n.addEventListener('click',function(e){if(e.target.closest('a'))n.classList.remove('open')})}})();</script>
 </body>
 </html>
