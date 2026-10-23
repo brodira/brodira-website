@@ -2,12 +2,96 @@ User-agent: *
 Allow: /
 Disallow: /impressum.html
 Disallow: /datenschutz.html
-Disallow: /start-dark.html
-Disallow: /start-warm.html
-Disallow: /start-parallax.html
-Disallow: /start-personalize.html
-Disallow: /start-stitch.html
-Disallow: /konfigurator.html
-Disallow: /showcase.html
+
+# AI assistants and search crawlers are welcome
+User-agent: GPTBot
+Allow: /
+Disallow: /impressum.html
+Disallow: /datenschutz.html
+
+User-agent: OAI-SearchBot
+Allow: /
+Disallow: /impressum.html
+Disallow: /datenschutz.html
+
+User-agent: ChatGPT-User
+Allow: /
+Disallow: /impressum.html
+Disallow: /datenschutz.html
+
+User-agent: ClaudeBot
+Allow: /
+Disallow: /impressum.html
+Disallow: /datenschutz.html
+
+User-agent: Claude-SearchBot
+Allow: /
+Disallow: /impressum.html
+Disallow: /datenschutz.html
+
+User-agent: Claude-User
+Allow: /
+Disallow: /impressum.html
+Disallow: /datenschutz.html
+
+User-agent: PerplexityBot
+Allow: /
+Disallow: /impressum.html
+Disallow: /datenschutz.html
+
+User-agent: Perplexity-User
+Allow: /
+Disallow: /impressum.html
+Disallow: /datenschutz.html
+
+User-agent: Google-Extended
+Allow: /
+Disallow: /impressum.html
+Disallow: /datenschutz.html
+
+User-agent: Applebot-Extended
+Allow: /
+Disallow: /impressum.html
+Disallow: /datenschutz.html
+
+User-agent: Bingbot
+Allow: /
+Disallow: /impressum.html
+Disallow: /datenschutz.html
+
+User-agent: CCBot
+Allow: /
+Disallow: /impressum.html
+Disallow: /datenschutz.html
+
+User-agent: Grok
+Allow: /
+Disallow: /impressum.html
+Disallow: /datenschutz.html
+
+User-agent: xAI-Bot
+Allow: /
+Disallow: /impressum.html
+Disallow: /datenschutz.html
+
+User-agent: MistralAI-User
+Allow: /
+Disallow: /impressum.html
+Disallow: /datenschutz.html
+
+User-agent: cohere-ai
+Allow: /
+Disallow: /impressum.html
+Disallow: /datenschutz.html
+
+User-agent: Amazonbot
+Allow: /
+Disallow: /impressum.html
+Disallow: /datenschutz.html
+
+User-agent: Meta-ExternalAgent
+Allow: /
+Disallow: /impressum.html
+Disallow: /datenschutz.html
 
 Sitemap: https://www.brodira.de/sitemap.xml
