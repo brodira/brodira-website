@@ -39,12 +39,12 @@
   <a class="brand" href="index.html"><span class="bmark">B</span><span class="bname">BRODIRA</span></a>
   <nav class="nav-links">
       <a href="index.html#leistungen">Services</a>
-      <a href="index.html#fuerwen">Who we serve</a>
+      <a href="index.html#fuer-wen">Who we serve</a>
       <a href="index.html#fertigung">Production</a>
-      <a href="index.html#sortiment">Textiles</a>
+      <a href="index.html#textil">Textiles</a>
       <a href="index.html#kontakt">Contact</a>
     </nav>
-  <div class="nav-right"><a class="lang" href="../hotels.html" hreflang="de" lang="de" aria-label="Deutsche Version">DE</a><a class="btn btn-primary" href="index.html#kontakt">Request a quote</a></div>
+  <div class="nav-right"><button class="burger" aria-label="Menü" type="button">☰</button><a class="lang" href="../hotels.html" hreflang="de" lang="de" aria-label="Deutsche Version">DE</a><a class="btn btn-primary" href="index.html#kontakt">Request a quote</a></div>
 </div></header>
 <main id="main">
 <div class="wrap">
@@ -78,6 +78,7 @@
   <div class="legal">© <span id="y"></span> BRODIRA · <a href="../impressum.html">Imprint</a> · <a href="../datenschutz.html">Privacy Policy</a></div>
 </div></footer>
 <script>document.getElementById('y').textContent=new Date().getFullYear();</script>
+<script>(function(){var b=document.querySelector('.burger'),n=document.querySelector('.nav-links');if(b&&n){b.addEventListener('click',function(){n.classList.toggle('open')});n.addEventListener('click',function(e){if(e.target.closest('a'))n.classList.remove('open')})}})();</script>
 <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "fcaf83a61dab483585c1012b2ba9d2e5"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>
