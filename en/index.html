@@ -660,19 +660,19 @@
         <p class="lede">Briefly describe your project – we usually get back to you within one working day with a quote and, on request, a sample.</p>
       </div>
       <div class="k-grid">
-        <form class="form reveal">
-          <div class="field"><label>Company</label><input type="text" placeholder="Your company"></div>
-          <div class="field"><label>Name</label><input type="text" placeholder="Contact person"></div>
-          <div class="field"><label>E-Mail</label><input type="email" placeholder="name@company.com"></div>
-          <div class="field"><label>Quantity</label><input type="text" placeholder="e.g. 50 / series"></div>
-          <div class="field full"><label>Textile / service</label>
-            <select>
-              <option>Logo embroidery (corporate wear)</option><option>Teamwear / club clothing</option><option>Polo shirts</option><option>Business shirts</option><option>Caps / Bucket Hats</option><option>Bags / tote bags</option><option>Baby textiles</option><option>Other / not sure yet</option>
-            </select>
+        <form class="form reveal" id="kform" novalidate>
+          <div class="field"><label for="kf0">Company</label><input id="kf0" name="firma" type="text" placeholder="Your company" maxlength="120" autocomplete="organization"></div>
+          <div class="field"><label for="kf1">Name</label><input id="kf1" name="name" type="text" placeholder="Contact person" maxlength="120" autocomplete="name"></div>
+          <div class="field"><label for="kf2">E-Mail</label><input id="kf2" name="email" type="email" placeholder="name@company.com" required maxlength="160" autocomplete="email"></div>
+          <div class="field"><label for="kf3">Quantity</label><input id="kf3" name="stueckzahl" type="text" placeholder="e.g. 50 / series" maxlength="60"></div>
+          <div class="field full"><label for="kf4">Textile / service</label>
+            <select id="kf4" name="leistung"><option>Logo embroidery (corporate wear)</option><option>Teamwear / club clothing</option><option>Polo shirts</option><option>Business shirts</option><option>Caps / Bucket Hats</option><option>Bags / tote bags</option><option>Baby textiles</option><option>Other / not sure yet</option></select>
           </div>
-          <div class="field full"><label>Message</label><textarea placeholder="What's it about? Design, occasion, target date …"></textarea></div>
+          <div class="field full"><label for="kf5">Message</label><textarea id="kf5" name="nachricht" placeholder="What's it about? Design, occasion, target date …" maxlength="3000"></textarea></div>
+          <div style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden" aria-hidden="true"><label>Website</label><input type="text" name="website" tabindex="-1" autocomplete="off"></div>
+          <div class="full" style="font-size:.86rem;line-height:1.5;color:rgba(236,230,218,.85)"><label style="display:flex;gap:.6rem;align-items:flex-start;text-transform:none;letter-spacing:0;font-size:.86rem"><input type="checkbox" name="consent" value="yes" required style="margin-top:.2rem;width:auto;flex:none"><span>I have read the <a href="../datenschutz.html" target="_blank" rel="noopener">privacy policy</a> (German) and agree that my details are used to process my request.</span></label></div>
           <div class="full"><button class="btn btn--light" type="submit" style="width:100%">Request a quote</button></div>
-          <p class="k-note full">Submitting opens your email app with a pre-filled enquiry to info@brodira.de.</p>
+          <p class="k-note full" id="kstatus" role="status" aria-live="polite">We usually reply within one working day. Your details are only used to process your request.</p>
         </form>
         <aside class="k-card reveal">
           <h3>BRODIRA Embroidery Workshop</h3>
@@ -734,17 +734,17 @@
 </script>
 <script>(function(){var b=document.querySelector('.burger'),n=document.querySelector('.nav-links');if(b&&n){b.addEventListener('click',function(){n.classList.toggle('open');});n.addEventListener('click',function(e){if(e.target.closest('a'))n.classList.remove('open');});}})();</script>
 <script>
-// Anfrageformular: öffnet das E-Mail-Programm mit vorausgefüllter Anfrage an info@brodira.de
-(function(){var f=document.querySelector('form.form');if(!f)return;
-f.removeAttribute('onsubmit');
-var fields=[].slice.call(f.querySelectorAll('.field'));
-fields.forEach(function(d,i){var l=d.querySelector('label'),c=d.querySelector('input,select,textarea');if(!l||!c)return;c.id='kf'+i;l.setAttribute('for','kf'+i);c.name='f'+i;});
-var em=f.querySelector('input[type=email]');if(em)em.required=true;
+// Anfrageformular: sendet an Make (EU), danach Weiterleitung zur Danke-Seite
+(function(){var f=document.getElementById('kform');if(!f)return;
+var st=document.getElementById('kstatus'),b=f.querySelector('button[type=submit]'),label=b.textContent;
 f.addEventListener('submit',function(e){e.preventDefault();
-var lines=fields.map(function(d){var l=d.querySelector('label'),c=d.querySelector('input,select,textarea');return c&&c.value?l.textContent.trim()+': '+c.value:null;}).filter(Boolean);
-var en=document.documentElement.lang==='en';
-var subj=en?'Quote request via brodira.de':'Anfrage über brodira.de';
-window.location.href='mailto:info@brodira.de?subject='+encodeURIComponent(subj)+'&body='+encodeURIComponent(lines.join('\n'));});})();
+if(!f.checkValidity()){f.reportValidity();return;}
+var d={lang:'en',page:location.href};
+[].slice.call(f.elements).forEach(function(c){if(c.name&&c.type!=='submit'){if(c.type==='checkbox'){d[c.name]=c.checked?'yes':'';}else{d[c.name]=c.value;}}});
+b.disabled=true;b.textContent='Sending …';
+fetch('https://hook.eu1.make.com/yv08v7dtccgn2uozoolko17p5ej1dsei',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(d)})
+.then(function(r){if(!r.ok)throw new Error(r.status);location.href='thanks.html';})
+.catch(function(){b.disabled=false;b.textContent=label;st.textContent='Sending did not work. Please email us directly at info@brodira.de or write on WhatsApp.';});});})();
 </script>
 <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "fcaf83a61dab483585c1012b2ba9d2e5"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
