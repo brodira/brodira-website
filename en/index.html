@@ -739,7 +739,8 @@
 var st=document.getElementById('kstatus'),b=f.querySelector('button[type=submit]'),label=b.textContent;
 f.addEventListener('submit',function(e){e.preventDefault();
 if(!f.checkValidity()){f.reportValidity();return;}
-var d={lang:'en',page:location.href};
+var ref='';try{var r=document.referrer?new URL(document.referrer):null;if(r&&r.origin===location.origin){ref=r.pathname;}}catch(x){}
+var d={lang:'en',page:'Formular: '+location.pathname+(ref?' | Vorherige Seite: '+ref:'')};
 [].slice.call(f.elements).forEach(function(c){if(c.name&&c.type!=='submit'){if(c.type==='checkbox'){d[c.name]=c.checked?'yes':'';}else{d[c.name]=c.value;}}});
 b.disabled=true;b.textContent='Sending …';
 fetch('https://hook.eu1.make.com/yv08v7dtccgn2uozoolko17p5ej1dsei',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(d)})
