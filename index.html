@@ -783,19 +783,19 @@
         <p class="lede">Beschreiben Sie kurz Ihr Vorhaben – wir melden uns in der Regel innerhalb eines Werktags mit einem Angebot und auf Wunsch einem Muster.</p>
       </div>
       <div class="k-grid">
-        <form class="form reveal">
-          <div class="field"><label>Firma</label><input type="text" placeholder="Ihr Unternehmen"></div>
-          <div class="field"><label>Name</label><input type="text" placeholder="Ansprechpartner:in"></div>
-          <div class="field"><label>E-Mail</label><input type="email" placeholder="name@firma.de"></div>
-          <div class="field"><label>Stückzahl</label><input type="text" placeholder="z. B. 50 / Serie"></div>
-          <div class="field full"><label>Textil / Leistung</label>
-            <select>
-              <option>Logo-Stickerei (Corporate Wear)</option><option>Teamwear / Vereinskleidung</option><option>Polo-Shirts</option><option>Business-Hemden</option><option>Caps / Bucket Hats</option><option>Taschen / Tote Bags</option><option>Babytextilien</option><option>Andere / weiß ich noch nicht</option>
-            </select>
+        <form class="form reveal" id="kform" novalidate>
+          <div class="field"><label for="kf0">Firma</label><input id="kf0" name="firma" type="text" placeholder="Ihr Unternehmen" maxlength="120" autocomplete="organization"></div>
+          <div class="field"><label for="kf1">Name</label><input id="kf1" name="name" type="text" placeholder="Ansprechpartner:in" maxlength="120" autocomplete="name"></div>
+          <div class="field"><label for="kf2">E-Mail</label><input id="kf2" name="email" type="email" placeholder="name@firma.de" required maxlength="160" autocomplete="email"></div>
+          <div class="field"><label for="kf3">Stückzahl</label><input id="kf3" name="stueckzahl" type="text" placeholder="z. B. 50 / Serie" maxlength="60"></div>
+          <div class="field full"><label for="kf4">Textil / Leistung</label>
+            <select id="kf4" name="leistung"><option>Logo-Stickerei (Corporate Wear)</option><option>Teamwear / Vereinskleidung</option><option>Polo-Shirts</option><option>Business-Hemden</option><option>Caps / Bucket Hats</option><option>Taschen / Tote Bags</option><option>Babytextilien</option><option>Andere / weiß ich noch nicht</option></select>
           </div>
-          <div class="field full"><label>Nachricht</label><textarea placeholder="Worum geht es? Motiv, Anlass, Wunschtermin …"></textarea></div>
+          <div class="field full"><label for="kf5">Nachricht</label><textarea id="kf5" name="nachricht" placeholder="Worum geht es? Motiv, Anlass, Wunschtermin …" maxlength="3000"></textarea></div>
+          <div style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden" aria-hidden="true"><label>Website</label><input type="text" name="website" tabindex="-1" autocomplete="off"></div>
+          <div class="full" style="font-size:.86rem;line-height:1.5;color:rgba(236,230,218,.85)"><label style="display:flex;gap:.6rem;align-items:flex-start;text-transform:none;letter-spacing:0;font-size:.86rem"><input type="checkbox" name="consent" value="yes" required style="margin-top:.2rem;width:auto;flex:none"><span>Ich habe die <a href="datenschutz.html" target="_blank" rel="noopener">Datenschutzerklärung</a> gelesen und bin einverstanden, dass meine Angaben zur Bearbeitung meiner Anfrage verwendet werden.</span></label></div>
           <div class="full"><button class="btn btn--light" type="submit" style="width:100%">Angebot anfordern</button></div>
-          <p class="k-note full">Mit dem Absenden öffnet sich Ihr E-Mail-Programm mit der vorausgefüllten Anfrage an info@brodira.de.</p>
+          <p class="k-note full" id="kstatus" role="status" aria-live="polite">Wir antworten in der Regel innerhalb eines Werktags. Ihre Angaben werden nur zur Bearbeitung Ihrer Anfrage verwendet.</p>
         </form>
         <aside class="k-card reveal">
           <h3>BRODIRA Stickerei-Manufaktur</h3>
@@ -857,17 +857,17 @@
 </script>
 <script>(function(){var b=document.querySelector('.burger'),n=document.querySelector('.nav-links');if(b&&n){b.addEventListener('click',function(){n.classList.toggle('open');});n.addEventListener('click',function(e){if(e.target.closest('a'))n.classList.remove('open');});}})();</script>
 <script>
-// Anfrageformular: öffnet das E-Mail-Programm mit vorausgefüllter Anfrage an info@brodira.de
-(function(){var f=document.querySelector('form.form');if(!f)return;
-f.removeAttribute('onsubmit');
-var fields=[].slice.call(f.querySelectorAll('.field'));
-fields.forEach(function(d,i){var l=d.querySelector('label'),c=d.querySelector('input,select,textarea');if(!l||!c)return;c.id='kf'+i;l.setAttribute('for','kf'+i);c.name='f'+i;});
-var em=f.querySelector('input[type=email]');if(em)em.required=true;
+// Anfrageformular: sendet an Make (EU), danach Weiterleitung zur Danke-Seite
+(function(){var f=document.getElementById('kform');if(!f)return;
+var st=document.getElementById('kstatus'),b=f.querySelector('button[type=submit]'),label=b.textContent;
 f.addEventListener('submit',function(e){e.preventDefault();
-var lines=fields.map(function(d){var l=d.querySelector('label'),c=d.querySelector('input,select,textarea');return c&&c.value?l.textContent.trim()+': '+c.value:null;}).filter(Boolean);
-var en=document.documentElement.lang==='en';
-var subj=en?'Quote request via brodira.de':'Anfrage über brodira.de';
-window.location.href='mailto:info@brodira.de?subject='+encodeURIComponent(subj)+'&body='+encodeURIComponent(lines.join('\n'));});})();
+if(!f.checkValidity()){f.reportValidity();return;}
+var d={lang:'de',page:location.href};
+[].slice.call(f.elements).forEach(function(c){if(c.name&&c.type!=='submit'){if(c.type==='checkbox'){d[c.name]=c.checked?'yes':'';}else{d[c.name]=c.value;}}});
+b.disabled=true;b.textContent='Wird gesendet …';
+fetch('https://hook.eu1.make.com/yv08v7dtccgn2uozoolko17p5ej1dsei',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(d)})
+.then(function(r){if(!r.ok)throw new Error(r.status);location.href='danke.html';})
+.catch(function(){b.disabled=false;b.textContent=label;st.textContent='Das Senden hat leider nicht geklappt. Bitte schreiben Sie uns direkt an info@brodira.de oder per WhatsApp.';});});})();
 </script>
 <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "fcaf83a61dab483585c1012b2ba9d2e5"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
