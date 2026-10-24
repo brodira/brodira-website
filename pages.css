@@ -64,3 +64,8 @@ footer a{color:var(--gold-l);text-decoration:none}
  .fnav a,.crumb a{display:inline-block;padding:8px 4px}
  .fmore summary{display:inline-block;padding:8px 4px}
 }
+
+.offer{font-size:15px;font-weight:600;color:var(--forest);margin:-8px 0 20px;letter-spacing:.01em}
+main p a,main li a,main summary a{color:#7a5a2c;text-decoration:underline;text-underline-offset:2px}
+main p a:hover,main li a:hover{color:var(--forest)}
+.crumb a{text-decoration:none}
