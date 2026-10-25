@@ -495,17 +495,14 @@
     .fmore summary{display:inline-block;padding:9px 2px}
   }
 
-/* Materialien und Zertifikate */
-.materials .trust-wrap{display:block;max-width:1100px}
+/* Materialien und Zertifikate (kompakt) */
+.materials .trust-wrap{display:block;max-width:1100px;text-align:center}
 .materials .trust-label{display:block;margin:0 0 16px}
-.materials .trust-logos{justify-content:flex-start;gap:22px}
+.materials .trust-logos{justify-content:center;gap:22px}
 .materials .trust-logos img{opacity:1;filter:none;height:24px;width:auto}
 .materials .trust-logos a{display:inline-flex}
-.material-row{display:grid;grid-template-columns:minmax(230px,330px) 1fr;gap:12px 32px;align-items:center;padding:14px 0;border-top:1px solid var(--hair)}
-.material-row p,.material-note{margin:0;font-size:1rem;line-height:1.55;color:var(--ink)}
-.material-note{margin-top:14px;padding-top:14px;border-top:1px solid var(--hair)}
+.material-note{margin:16px auto 0;max-width:880px;font-size:1rem;line-height:1.55;color:var(--ink)}
 .material-note a{color:var(--gold-d);text-decoration:underline}
-@media(max-width:720px){.material-row{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -577,22 +574,16 @@
   <!-- MATERIALIEN UND ZERTIFIKATE -->
   <section class="trust materials" id="materialien" aria-labelledby="materialien-titel">
     <div class="wrap trust-wrap">
-      <h2 id="materialien-titel" class="trust-label">Materialien und Zertifikate</h2>
-      <div class="material-row">
-        <div class="trust-logos">
-          <img src="assets/logo-stanleystella.webp" alt="Logo Stanley/Stella" width="730" height="150" loading="lazy">
-          <a href="https://global-standard.org" target="_blank" rel="noopener"><img src="assets/logo-gots.webp" alt="GOTS-Logo – gilt für die Bio-Baumwoll-Blanks von Stanley/Stella" width="152" height="150" loading="lazy"></a>
-        </div>
-        <p><strong>Blanks:</strong> Bio-Baumwolle von Stanley/Stella. GOTS-zertifiziert ist der Hersteller: Stanley and Stella SA, Lizenz CB-GOTS-CUC-03-819434, zertifiziert durch Control Union Certifications.</p>
+      <h2 id="materialien-titel" class="trust-label">Materialien und Zertifikate der Hersteller</h2>
+      <div class="trust-logos">
+        <img src="assets/logo-stanleystella.webp" alt="Logo Stanley/Stella" width="730" height="150" loading="lazy">
+        <a href="https://global-standard.org" target="_blank" rel="noopener"><img src="assets/logo-gots.webp" alt="GOTS-Logo – gilt für die Bio-Baumwoll-Blanks von Stanley/Stella" width="152" height="150" loading="lazy"></a>
+        <img src="assets/logo-russell.webp" alt="Logo Russell" width="184" height="150" loading="lazy">
+        <img src="assets/logo-sols.webp" alt="Logo SOL'S" width="274" height="150" loading="lazy">
+        <img src="assets/logo-madeira.webp" alt="Logo Madeira" width="755" height="150" loading="lazy">
+        <a href="https://www.oeko-tex.com" target="_blank" rel="noopener"><img src="assets/logo-oekotex.webp" alt="OEKO-TEX®-Logo – gilt für Materialien von Madeira, Russell und SOL'S laut deren Angaben" width="150" height="150" loading="lazy"></a>
       </div>
-      <div class="material-row">
-        <div class="trust-logos">
-          <img src="assets/logo-madeira.webp" alt="Logo Madeira" width="755" height="150" loading="lazy">
-          <a href="https://www.oeko-tex.com" target="_blank" rel="noopener"><img src="assets/logo-oekotex.webp" alt="OEKO-TEX®-Logo – gilt für die Stickgarne von Madeira" width="150" height="150" loading="lazy"></a>
-        </div>
-        <p><strong>Stickgarne:</strong> Madeira. OEKO-TEX® STANDARD 100, Zertifikat Nr. 94.0.6007, Hohenstein; Zertifikatsinhaber: Madeira Garnfabrik Rudolf Schmidt KG.</p>
-      </div>
-      <p class="material-note">Die Zertifikate gehören den Herstellern und gelten für deren Materialien. BRODIRA ist nicht GOTS- oder OEKO-TEX®-zertifiziert; die bestickten Produkte tragen kein GOTS- oder OEKO-TEX®-Label. Andere Marken wie Russell, SOL'S und Result oder Ihre eigene Ware besticken wir auf Wunsch; sie sind nicht automatisch zertifiziert. <a href="nachhaltigkeit.html">Mehr zu unseren Materialien</a></p>
+      <p class="material-note">Wir besticken Blanks von Stanley/Stella (GOTS), Russell und SOL'S und sticken mit Garnen von Madeira. Zertifiziert sind die Hersteller bzw. deren Materialien: Stanley/Stella nach GOTS, Madeira, Russell und SOL'S nach OEKO-TEX® STANDARD 100 (laut Herstellerangaben). Die Zertifikate gehören den Herstellern und gelten für deren Materialien. <a href="nachhaltigkeit.html">Zertifikate und Details</a></p>
     </div>
   </section>
 
