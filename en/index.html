@@ -372,17 +372,14 @@
     .fmore summary{display:inline-block;padding:9px 2px}
   }
 
-/* Materialien und Zertifikate */
-.materials .trust-wrap{display:block;max-width:1100px}
+/* Materialien und Zertifikate (kompakt) */
+.materials .trust-wrap{display:block;max-width:1100px;text-align:center}
 .materials .trust-label{display:block;margin:0 0 16px}
-.materials .trust-logos{justify-content:flex-start;gap:22px}
+.materials .trust-logos{justify-content:center;gap:22px}
 .materials .trust-logos img{opacity:1;filter:none;height:24px;width:auto}
 .materials .trust-logos a{display:inline-flex}
-.material-row{display:grid;grid-template-columns:minmax(230px,330px) 1fr;gap:12px 32px;align-items:center;padding:14px 0;border-top:1px solid var(--hair)}
-.material-row p,.material-note{margin:0;font-size:1rem;line-height:1.55;color:var(--ink)}
-.material-note{margin-top:14px;padding-top:14px;border-top:1px solid var(--hair)}
+.material-note{margin:16px auto 0;max-width:880px;font-size:1rem;line-height:1.55;color:var(--ink)}
 .material-note a{color:var(--gold-d);text-decoration:underline}
-@media(max-width:720px){.material-row{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -454,22 +451,16 @@
   <!-- MATERIALS AND CERTIFICATES -->
   <section class="trust materials" id="materials" aria-labelledby="materials-title">
     <div class="wrap trust-wrap">
-      <h2 id="materials-title" class="trust-label">Materials and certificates</h2>
-      <div class="material-row">
-        <div class="trust-logos">
-          <img src="../assets/logo-stanleystella.webp" alt="Stanley/Stella logo" width="730" height="150" loading="lazy">
-          <a href="https://global-standard.org" target="_blank" rel="noopener"><img src="../assets/logo-gots.webp" alt="GOTS logo – applies to the organic cotton blanks by Stanley/Stella" width="152" height="150" loading="lazy"></a>
-        </div>
-        <p><strong>Blanks:</strong> organic cotton by Stanley/Stella. The manufacturer is GOTS-certified: Stanley and Stella SA, licence CB-GOTS-CUC-03-819434, certified by Control Union Certifications.</p>
+      <h2 id="materials-title" class="trust-label">Materials and certificates of the manufacturers</h2>
+      <div class="trust-logos">
+        <img src="../assets/logo-stanleystella.webp" alt="Stanley/Stella logo" width="730" height="150" loading="lazy">
+        <a href="https://global-standard.org" target="_blank" rel="noopener"><img src="../assets/logo-gots.webp" alt="GOTS logo – applies to the organic cotton blanks by Stanley/Stella" width="152" height="150" loading="lazy"></a>
+        <img src="../assets/logo-russell.webp" alt="Russell logo" width="184" height="150" loading="lazy">
+        <img src="../assets/logo-sols.webp" alt="SOL'S logo" width="274" height="150" loading="lazy">
+        <img src="../assets/logo-madeira.webp" alt="Madeira logo" width="755" height="150" loading="lazy">
+        <a href="https://www.oeko-tex.com" target="_blank" rel="noopener"><img src="../assets/logo-oekotex.webp" alt="OEKO-TEX® logo – applies to materials by Madeira, Russell and SOL'S according to their statements" width="150" height="150" loading="lazy"></a>
       </div>
-      <div class="material-row">
-        <div class="trust-logos">
-          <img src="../assets/logo-madeira.webp" alt="Madeira logo" width="755" height="150" loading="lazy">
-          <a href="https://www.oeko-tex.com" target="_blank" rel="noopener"><img src="../assets/logo-oekotex.webp" alt="OEKO-TEX® logo – applies to the Madeira embroidery threads" width="150" height="150" loading="lazy"></a>
-        </div>
-        <p><strong>Embroidery threads:</strong> Madeira. OEKO-TEX® STANDARD 100, certificate no. 94.0.6007, Hohenstein; certificate holder: Madeira Garnfabrik Rudolf Schmidt KG.</p>
-      </div>
-      <p class="material-note">The certificates belong to the manufacturers and cover their materials. BRODIRA is not GOTS- or OEKO-TEX®-certified, and our embroidered products do not carry a GOTS or OEKO-TEX® label. We also embroider other brands such as Russell, SOL'S and Result, or your own garments, on request; these are not automatically certified. <a href="nachhaltigkeit.html">More about our materials</a></p>
+      <p class="material-note">We embroider blanks by Stanley/Stella (GOTS), Russell and SOL'S and use Madeira threads. The manufacturers or their materials are certified: Stanley/Stella to GOTS; Madeira, Russell and SOL'S to OEKO-TEX® STANDARD 100 (according to the manufacturers). The certificates belong to the manufacturers and apply to their materials. <a href="nachhaltigkeit.html">Certificates and details</a></p>
     </div>
   </section>
 
