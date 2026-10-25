@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <title>Embroidery Karlsruhe for Businesses – Logo Embroidery | BRODIRA</title>
-<meta name="description" content="Embroidery from Karlsruhe for businesses: logos and names on GOTS organic cotton. Fair volume pricing, fast delivery. Request a quote now.">
+<meta name="description" content="Embroidery from Karlsruhe for businesses: logos and names on organic cotton. Fair volume pricing, fast delivery. Request a quote now.">
 <link rel="canonical" href="https://www.brodira.de/en/">
 <link rel="alternate" hreflang="de" href="https://www.brodira.de/">
 <link rel="alternate" hreflang="en" href="https://www.brodira.de/en/">
@@ -38,7 +38,7 @@
   "@id": "https://www.brodira.de/#business",
   "name": "BRODIRA",
   "alternateName": "BRODIRA Embroidery Workshop",
-  "description": "Embroidery workshop in Karlsruhe for business customers: personalised embroidery with logos and names on GOTS-certified organic cotton.",
+  "description": "Embroidery workshop in Karlsruhe for business customers: personalised embroidery with logos and names, by default on organic cotton.",
   "url": "https://www.brodira.de/",
   "image": "https://www.brodira.de/assets/maschine.webp",
   "logo": "https://www.brodira.de/assets/icon-1024.png",
@@ -49,7 +49,7 @@
   "founder": { "@type": "Person", "name": "Fabian Sven Heinrich" },
   "address": { "@type": "PostalAddress", "streetAddress": "Auer Str. 48 A", "postalCode": "76227", "addressLocality": "Karlsruhe", "addressRegion": "Baden-Württemberg", "addressCountry": "DE" },
   "areaServed": [ "DE", "AT", "CH" ],
-  "knowsAbout": ["Embroidery", "Logo embroidery", "Textile finishing", "Promotional textiles", "GOTS organic cotton"]
+  "knowsAbout": ["Embroidery", "Logo embroidery", "Textile finishing", "Promotional textiles", "Organic cotton"]
 }
 </script>
 <script type="application/ld+json">
@@ -61,7 +61,7 @@
     { "@type": "Question", "name": "How much does embroidery cost?", "acceptedAnswer": { "@type": "Answer", "text": "The price depends on the design, stitch count, textile and quantity. You receive a transparent quote with volume pricing, usually within one working day." } },
     { "@type": "Question", "name": "Can you embroider our company logo?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We digitise your logo into an embroidery file and embroider textiles precisely and durably – optionally with neutral (white-label) delivery to your customers." } },
     { "@type": "Question", "name": "Do you offer framework contracts and recurring deliveries?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. For recurring orders we agree fixed terms and predictable delivery dates – with consistent quality from batch to batch." } },
-    { "@type": "Question", "name": "Which materials do you use?", "acceptedAnswer": { "@type": "Answer", "text": "By default GOTS-certified organic cotton from Stanley/Stella – toxin-tested and skin-friendly. Other textiles are available on request." } }
+    { "@type": "Question", "name": "Which materials do you use?", "acceptedAnswer": { "@type": "Answer", "text": "By default we embroider organic cotton blanks by Stanley/Stella, and other brands such as Russell, SOL'S and Result on request. We use Madeira embroidery threads. The certificates for these materials are listed under “Materials and certificates”." } }
   ]
 }
 </script>
@@ -336,7 +336,8 @@
   .trust-logos{display:flex;align-items:center;gap:34px;flex-wrap:wrap;justify-content:center}
   .trust-logos img{height:30px;width:auto;opacity:.55;filter:grayscale(1);transition:opacity .25s,filter .25s}
   .trust-logos img:hover{opacity:1;filter:grayscale(0)}
-  @media(max-width:620px){.trust-logos{gap:22px}.trust-logos img{height:24px}}
+  @media(max-width:620px){.trust-logos{gap:22px}.trust-logos img{height:24px}
+}
   /* 3D parallax hero scene */
   .scene{position:relative;perspective:1500px;min-height:520px;display:flex;align-items:center;justify-content:center}
   .scene .glow{position:absolute;width:70%;height:70%;border-radius:50%;background:radial-gradient(circle,rgba(184,146,90,.28),transparent 68%);filter:blur(10px);z-index:0}
@@ -370,6 +371,18 @@
     .inline-links a,.aud .more,footer a{display:inline-block;padding:9px 2px}
     .fmore summary{display:inline-block;padding:9px 2px}
   }
+
+/* Materialien und Zertifikate */
+.materials .trust-wrap{display:block;max-width:1100px}
+.materials .trust-label{display:block;margin:0 0 16px}
+.materials .trust-logos{justify-content:flex-start;gap:22px}
+.materials .trust-logos img{opacity:1;filter:none;height:24px;width:auto}
+.materials .trust-logos a{display:inline-flex}
+.material-row{display:grid;grid-template-columns:minmax(230px,330px) 1fr;gap:12px 32px;align-items:center;padding:14px 0;border-top:1px solid var(--hair)}
+.material-row p,.material-note{margin:0;font-size:1rem;line-height:1.55;color:var(--ink)}
+.material-note{margin-top:14px;padding-top:14px;border-top:1px solid var(--hair)}
+.material-note a{color:var(--gold-d);text-decoration:underline}
+@media(max-width:720px){.material-row{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -414,7 +427,7 @@
         <h1>Personalised
           <span class="stitch-word">embroidery<svg viewBox="0 0 300 18" preserveAspectRatio="none"><path d="M2,11 Q75,2 150,9 T298,7"/></svg></span>
           for your business – in any quantity.</h1>
-        <p class="lede">BRODIRA is your partner for personalised organic-cotton embroidery – for baby retail, clinics, hotels and companies. Logos &amp; names, made in Karlsruhe, delivered at scale.</p>
+        <p class="lede">BRODIRA is your partner for personalised embroidery on organic cotton – for baby retail, clinics, hotels and companies. Logos &amp; names, made in Karlsruhe, delivered at scale.</p>
         <div class="hero-cta">
           <a class="btn" href="#kontakt">Request pricing</a>
           <a class="btn btn--ghost" href="#fertigung">Our production</a>
@@ -430,33 +443,41 @@
           <ellipse cx="250" cy="250" rx="245" ry="260"/>
         </svg>
         <div class="deck" id="deck">
-          <div class="lyr lyr-back"  data-base="translateZ(-30px) rotate(-4deg)" data-depth="0.6"><img src="../assets/bag.webp" alt="Embroidered tote bag" loading="eager"></div>
-          <div class="lyr lyr-main"  data-base="translateZ(40px)"               data-depth="1.4"><img src="../assets/polo.webp" alt="Embroidered polo shirt with logo" loading="eager"></div>
-          <div class="lyr lyr-front" data-base="translateZ(95px) rotate(3deg)"   data-depth="2.2"><img src="../assets/hemd.webp" alt="Embroidered business shirt with logo" loading="eager"></div>
+          <div class="lyr lyr-back"  data-base="translateZ(-30px) rotate(-4deg)" data-depth="0.6"><img width="900" height="900" src="../assets/bag.webp" alt="Embroidered tote bag" loading="eager"></div>
+          <div class="lyr lyr-main"  data-base="translateZ(40px)"               data-depth="1.4"><img width="900" height="900" src="../assets/polo.webp" alt="Embroidered polo shirt with logo" loading="eager"></div>
+          <div class="lyr lyr-front" data-base="translateZ(95px) rotate(3deg)"   data-depth="2.2"><img width="900" height="900" src="../assets/hemd.webp" alt="Embroidered business shirt with logo" loading="eager"></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- TRUST STRIP -->
-  <section class="trust" aria-label="Marken und Zertifizierungen">
+  <!-- MATERIALS AND CERTIFICATES -->
+  <section class="trust materials" id="materials" aria-labelledby="materials-title">
     <div class="wrap trust-wrap">
-      <span class="trust-label">We work with blanks &amp; threads certified to</span>
-      <div class="trust-logos">
-        <img src="../assets/logo-stanleystella.webp" alt="Stanley/Stella – organic cotton blanks" loading="lazy">
-        <img src="../assets/logo-russell.webp" alt="Russell" loading="lazy">
-        <img src="../assets/logo-gots.webp" alt="GOTS – Global Organic Textile Standard" loading="lazy">
-        <img src="../assets/logo-oekotex.webp" alt="OEKO-TEX tested for harmful substances" loading="lazy">
-        <img src="../assets/logo-madeira.webp" alt="Madeira premium embroidery thread" loading="lazy">
+      <h2 id="materials-title" class="trust-label">Materials and certificates</h2>
+      <div class="material-row">
+        <div class="trust-logos">
+          <img src="../assets/logo-stanleystella.webp" alt="Stanley/Stella logo" width="730" height="150" loading="lazy">
+          <a href="https://global-standard.org" target="_blank" rel="noopener"><img src="../assets/logo-gots.webp" alt="GOTS logo – applies to the organic cotton blanks by Stanley/Stella" width="152" height="150" loading="lazy"></a>
+        </div>
+        <p><strong>Blanks:</strong> organic cotton by Stanley/Stella. The manufacturer is GOTS-certified: Stanley and Stella SA, licence CB-GOTS-CUC-03-819434, certified by Control Union Certifications.</p>
       </div>
+      <div class="material-row">
+        <div class="trust-logos">
+          <img src="../assets/logo-madeira.webp" alt="Madeira logo" width="755" height="150" loading="lazy">
+          <a href="https://www.oeko-tex.com" target="_blank" rel="noopener"><img src="../assets/logo-oekotex.webp" alt="OEKO-TEX® logo – applies to the Madeira embroidery threads" width="150" height="150" loading="lazy"></a>
+        </div>
+        <p><strong>Embroidery threads:</strong> Madeira. OEKO-TEX® STANDARD 100, certificate no. 94.0.6007, Hohenstein; certificate holder: Madeira Garnfabrik Rudolf Schmidt KG.</p>
+      </div>
+      <p class="material-note">The certificates belong to the manufacturers and cover their materials. BRODIRA is not GOTS- or OEKO-TEX®-certified, and our embroidered products do not carry a GOTS or OEKO-TEX® label. We also embroider other brands such as Russell, SOL'S and Result, or your own garments, on request; these are not automatically certified. <a href="nachhaltigkeit.html">More about our materials</a></p>
     </div>
   </section>
 
   <!-- TICKER -->
   <div class="ticker" aria-hidden="true">
     <div class="ticker-track">
-      <span>GOTS-certified organic cotton blanks</span><span>Made in Karlsruhe</span><span>3–5 working days delivery</span><span>Volume pricing &amp; white-label</span><span>Logo digitising by us</span><span>Sampling before production</span>
-      <span>GOTS-certified organic cotton blanks</span><span>Made in Karlsruhe</span><span>3–5 working days delivery</span><span>Volume pricing &amp; white-label</span><span>Logo digitising by us</span><span>Sampling before production</span>
+      <span>Organic cotton blanks</span><span>Made in Karlsruhe</span><span>3–5 working days delivery</span><span>Volume pricing &amp; white-label</span><span>Logo digitising by us</span><span>Sampling before production</span>
+      <span>Organic cotton blanks</span><span>Made in Karlsruhe</span><span>3–5 working days delivery</span><span>Volume pricing &amp; white-label</span><span>Logo digitising by us</span><span>Sampling before production</span>
     </div>
   </div>
 
@@ -473,9 +494,9 @@
       <div class="cards">
         <article class="card reveal">
           <span class="num">01</span>
-          <h3>GOTS organic quality</h3>
-          <p>GOTS-certified organic cotton from Stanley/Stella – quality that fits your brand.</p>
-          <span class="chip">GOTS-certified blanks</span>
+          <h3>Organic cotton by Stanley/Stella</h3>
+          <p>Organic cotton blanks by Stanley/Stella – quality that fits your brand.</p>
+          <span class="chip">Organic cotton blanks</span>
         </article>
         <article class="card reveal">
           <span class="num">02</span>
@@ -490,7 +511,7 @@
           <span class="chip">White-label too</span>
         </article>
       </div>
-      <p class="inline-links reveal">Learn more: <a href="logo-stickerei.html">Logo embroidery</a> · <a href="namensstickerei.html">Name embroidery</a> · <a href="stickerei-karlsruhe.html">Embroidery Karlsruhe</a> · <a href="nachhaltigkeit.html">Sustainability</a></p>
+      <p class="inline-links reveal">Learn more: <a href="logo-stickerei.html">Logo embroidery</a> · <a href="namensstickerei.html">Name embroidery</a> · <a href="stickerei-karlsruhe.html">Embroidery Karlsruhe</a> · <a href="nachhaltigkeit.html">Materials</a></p>
     </div>
   </section>
 
@@ -550,10 +571,10 @@
         <p class="lede">From corporate wear to merchandise: we embroider premium blanks from leading brands like Stanley/Stella and Russell – tailored to your use case.</p>
       </div>
       <div class="products">
-        <article class="prod reveal"><div class="ph"><img src="../assets/hemd.webp" alt="Business shirt"></div><div class="body"><h3>Business shirt</h3><p>Long-sleeve poplin for uniforms &amp; corporate wear – embroidered with your logo.</p><span class="sku">Russell · Tailored Poplin</span></div></article>
-        <article class="prod reveal"><div class="ph"><img src="../assets/polo.webp" alt="Polo shirt"></div><div class="body"><h3>Polo shirt</h3><p>Organic-cotton polo for teams, events &amp; hospitality – logo on the left chest.</p><span class="sku">Stanley/Stella · STPM224</span></div></article>
-        <article class="prod reveal"><div class="ph"><img src="../assets/bag.webp" alt="Tote Bag"></div><div class="body"><h3>Tote Bag</h3><p>Cotton bag for promotion, goodie bags &amp; merchandise.</p><span class="sku">Stanley/Stella · STAU773</span></div></article>
-        <article class="prod reveal"><div class="ph"><img src="../assets/hat.webp" alt="Bucket Hat"></div><div class="body"><h3>Bucket Hat</h3><p>Summer hat for events, festivals &amp; seasonal campaigns – embroidered with a logo.</p><span class="sku">Stanley/Stella · STAU893</span></div></article>
+        <article class="prod reveal"><div class="ph"><img width="900" height="900" src="../assets/hemd.webp" alt="Business shirt"></div><div class="body"><h3>Business shirt</h3><p>Long-sleeve poplin for uniforms &amp; corporate wear – embroidered with your logo.</p><span class="sku">Russell · Tailored Poplin</span></div></article>
+        <article class="prod reveal"><div class="ph"><img width="900" height="900" src="../assets/polo.webp" alt="Polo shirt"></div><div class="body"><h3>Polo shirt</h3><p>Organic-cotton polo for teams, events &amp; hospitality – logo on the left chest.</p><span class="sku">Stanley/Stella · STPM224</span></div></article>
+        <article class="prod reveal"><div class="ph"><img width="900" height="900" src="../assets/bag.webp" alt="Tote Bag"></div><div class="body"><h3>Tote Bag</h3><p>Cotton bag for promotion, goodie bags &amp; merchandise.</p><span class="sku">Stanley/Stella · STAU773</span></div></article>
+        <article class="prod reveal"><div class="ph"><img width="900" height="900" src="../assets/hat.webp" alt="Bucket Hat"></div><div class="body"><h3>Bucket Hat</h3><p>Summer hat for events, festivals &amp; seasonal campaigns – embroidered with a logo.</p><span class="sku">Stanley/Stella · STAU893</span></div></article>
       </div>
       <p class="inline-links reveal">Further blanks and brands on request – just tell us which textile you would like to customise.</p>
     </div>
@@ -562,7 +583,7 @@
   <!-- FERTIGUNG (dark) -->
   <section id="fertigung" class="fertigung">
     <div class="wrap fert-grid">
-      <div class="fert-figure reveal"><img src="../assets/werkstatt.webp" alt="BRODIRA embroidery workshop with thread spools and hoops"></div>
+      <div class="fert-figure reveal"><img width="1200" height="900" src="../assets/werkstatt.webp" alt="BRODIRA embroidery workshop with thread spools and hoops"></div>
       <div class="reveal">
         <span class="eyebrow">Our production</span>
         <h2>Embroidery workshop in Karlsruhe.</h2>
@@ -594,11 +615,11 @@
       <div class="steps">
         <div class="step reveal"><span class="stitch-no">01 — Enquiry</span><h3>Enquiry</h3><p>You tell us your needs, quantity and desired design – by phone or email.</p></div>
         <div class="step reveal"><span class="stitch-no">02 — Sample</span><h3>Sample &amp; quote</h3><p>You receive an embroidery sample and transparent terms with volume pricing.</p></div>
-        <div class="step reveal"><span class="stitch-no">03 — Production</span><h3>Production</h3><p>We embroider in Karlsruhe – precise, on GOTS-certified blanks and on time.</p></div>
+        <div class="step reveal"><span class="stitch-no">03 — Production</span><h3>Production</h3><p>We embroider in Karlsruhe – precise and on time, by default on Stanley/Stella blanks.</p></div>
         <div class="step reveal"><span class="stitch-no">04 — Delivery</span><h3>Delivery</h3><p>Ready to ship in your chosen packaging – neutral or with your branding.</p></div>
       </div>
       <div class="stats reveal">
-        <div class="stat"><div class="v">GOTS</div><div class="l">certified organic blanks</div></div>
+        <div class="stat"><div class="v">Organic</div><div class="l">cotton blanks</div></div>
         <div class="stat"><div class="v">3–5</div><div class="l">working days delivery</div></div>
         <div class="stat"><div class="v">From 1</div><div class="l">piece minimum</div></div>
         <div class="stat"><div class="v">Own</div><div class="l">Embroidery in Karlsruhe</div></div>
@@ -614,14 +635,14 @@
       <div class="sec-head reveal">
         <span class="eyebrow">About BRODIRA</span>
         <h2>A small workshop with high standards.</h2>
-        <p class="lede">BRODIRA is an embroidery workshop in Karlsruhe. We customise textiles made from GOTS-certified organic cotton with names, logos and bespoke designs – from a single piece to a recurring series.</p>
+        <p class="lede">BRODIRA is an embroidery workshop in Karlsruhe. We customise textiles, by default made of organic cotton by Stanley/Stella, with names, logos and bespoke designs – from a single piece to a recurring series.</p>
       </div>
       <div class="about-grid">
         <div class="about-card reveal">
           <h3>Our standard</h3>
           <p>We treat every order as if it were the only one – whether a single gift or a delivery to your company.</p>
           <div class="quality">
-            <div><span class="ic">🌱</span><span>GOTS-certified organic cotton (Stanley/Stella)</span></div>
+            <div><span class="ic">🌱</span><span>Organic cotton by Stanley/Stella</span></div>
             <div><span class="ic">🪡</span><span>Professional machine embroidery – precise &amp; durable</span></div>
             <div><span class="ic">🇩🇪</span><span>Made in our workshop in Karlsruhe</span></div>
           </div>
@@ -646,7 +667,7 @@
         <div class="q"><button aria-expanded="false">How much does embroidery cost?<span class="sign">+</span></button><div class="ans"><p>The price depends on the design, stitch count, textile and quantity. You receive a transparent quote with volume pricing, usually within one working day.</p></div></div>
         <div class="q"><button aria-expanded="false">Can you embroider our company logo?<span class="sign">+</span></button><div class="ans"><p>Yes. We digitise your logo into an embroidery file and embroider textiles precisely and durably – optionally with neutral (white-label) delivery to your customers.</p></div></div>
         <div class="q"><button aria-expanded="false">Do you offer framework contracts and recurring deliveries?<span class="sign">+</span></button><div class="ans"><p>Yes. For recurring orders we agree fixed terms and predictable delivery dates – with consistent quality from batch to batch.</p></div></div>
-        <div class="q"><button aria-expanded="false">Which materials do you use?<span class="sign">+</span></button><div class="ans"><p>By default GOTS-certified organic cotton from Stanley/Stella – toxin-tested and skin-friendly. Other textiles are available on request.</p></div></div>
+        <div class="q"><button aria-expanded="false">Which materials do you use?<span class="sign">+</span></button><div class="ans"><p>By default we embroider organic cotton blanks by Stanley/Stella, and other brands such as Russell, SOL'S and Result on request. We use Madeira embroidery threads. The certificates for these materials are listed under “Materials and certificates”.</p></div></div>
       </div>
     </div>
   </section>
@@ -691,8 +712,8 @@
 <footer>
   <div class="wrap foot">
     <span class="brand">BRODIRA</span>
-    <span><a href="stickerei-karlsruhe.html">Embroidery Karlsruhe</a> · <a href="logo-stickerei.html">Logo embroidery</a> · <a href="namensstickerei.html">Name embroidery</a> · <a href="nachhaltigkeit.html">Sustainability</a></span>
-    <span>B2B Embroidery Workshop · Karlsruhe · GOTS organic blanks</span>
+    <span><a href="stickerei-karlsruhe.html">Embroidery Karlsruhe</a> · <a href="logo-stickerei.html">Logo embroidery</a> · <a href="namensstickerei.html">Name embroidery</a> · <a href="nachhaltigkeit.html">Materials</a></span>
+    <span>B2B Embroidery Workshop · Karlsruhe · organic cotton blanks</span>
     <span><a href="../impressum.html">Imprint</a> · <a href="../datenschutz.html">Privacy Policy</a></span>
   </div>
 </footer>
