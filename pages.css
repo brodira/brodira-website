@@ -78,3 +78,6 @@ main p a:hover,main li a:hover{color:var(--forest)}
 .cert-table td{padding:11px 12px;border-top:1px solid #ece2d3;vertical-align:top;color:#1c1c1c}
 .cert-table td:first-child{font-weight:600;color:var(--forest)}
 .cert-note{font-size:14px;color:var(--muted);margin:8px 0 0}
+
+.flow-steps{padding-left:22px;margin:12px 0}
+.flow-steps li{margin:8px 0}
