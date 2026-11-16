@@ -57,7 +57,7 @@
   "@type": "FAQPage",
   "mainEntity": [
     { "@type": "Question", "name": "What is your minimum order quantity?", "acceptedAnswer": { "@type": "Answer", "text": "We produce from a single piece to a recurring series. Volume pricing applies from the first bulk order – just tell us your desired quantity." } },
-    { "@type": "Question", "name": "How much does embroidery cost?", "acceptedAnswer": { "@type": "Answer", "text": "The price depends on the design, stitch count, textile and quantity. You receive a transparent quote with volume pricing, usually within one working day." } },
+    { "@type": "Question", "name": "How much does embroidery cost?", "acceptedAnswer": { "@type": "Answer", "text": "The price depends on the design, stitch count, textile and quantity. You receive a transparent quote with volume pricing, usually within one working day. Guide values are on the page “Embroidery price factors”." } },
     { "@type": "Question", "name": "Can you embroider our company logo?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We digitise your logo into an embroidery file and embroider textiles precisely and durably – optionally with neutral (white-label) delivery to your customers." } },
     { "@type": "Question", "name": "Do you offer framework contracts and recurring deliveries?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. For recurring orders we agree fixed terms and predictable delivery dates – with consistent quality from batch to batch." } },
     { "@type": "Question", "name": "Which materials do you use?", "acceptedAnswer": { "@type": "Answer", "text": "Depending on the order, we embroider organic cotton blanks by Stanley/Stella, and other brands such as Russell, SOL'S and Result on request. We use Madeira embroidery threads. The certificates for these materials are listed under “Materials and certificates”." } }
@@ -73,11 +73,11 @@
     --green:#18271A;        /* evergreen – brand */
     --green-line:#355040;   /* stitch green on dark */
     --ink:#14181F;
-    --muted:#5C6373;
+    --muted:#5B5247;
     --amber:#DDA02A;         /* variegated thread */
     --rust:#C0563A;          /* variegated thread */
     --gold:#B8925A;          /* brand gold */
-    --gold-d:#86652F;
+    --gold-d:#7A5A2C;--gold-l:#D4AE7A;
     --gold-hair:rgba(184,146,90,.45);
     --green-soft:#23351F;
     --hair:rgba(20,24,31,.14);
@@ -118,7 +118,7 @@
     cursor:pointer;transition:transform .25s ease,box-shadow .25s ease;
   }
   .btn:hover{transform:translateY(-2px);box-shadow:0 10px 26px -12px rgba(34,49,42,.6)}
-  .btn--ghost{--bg:transparent;--fg:var(--ink);border:1.5px dashed var(--hair)}
+  .btn--ghost{--bg:transparent;--fg:var(--green);border:1.5px solid rgba(24,39,26,.5)}
   .btn--ghost:hover{border-color:var(--green);box-shadow:none}
   .btn--light{--bg:var(--paper-2);--fg:var(--green)}
 
@@ -189,7 +189,7 @@
     display:flex;flex-direction:column;min-height:240px;
   }
   .card:hover{transform:translateY(-4px);box-shadow:0 22px 40px -28px rgba(20,24,31,.4)}
-  .card .num{font-family:"JetBrains Mono",monospace;font-size:.74rem;color:var(--rust);letter-spacing:.1em}
+  .card .num{font-family:"JetBrains Mono",monospace;font-size:.74rem;color:var(--gold-d);letter-spacing:.1em}
   .card h3{margin:.5rem 0 .6rem}
   .card p{color:var(--muted);font-size:.97rem}
   .card .chip{
@@ -206,7 +206,7 @@
   .audience .aud:nth-child(2n){border-right:0}
   .audience .aud:nth-last-child(-n+2){border-bottom:0}
   .aud:hover{background:var(--paper-3)}
-  .aud .k{font-family:"JetBrains Mono",monospace;font-size:.72rem;color:var(--rust);letter-spacing:.1em}
+  .aud .k{font-family:"JetBrains Mono",monospace;font-size:.72rem;color:var(--gold-d);letter-spacing:.1em}
   .aud h3{margin:.6rem 0 .5rem;font-size:1.18rem}
   .aud p{color:var(--muted);font-size:.95rem}
   .aud .more{display:inline-block;margin-top:1rem;font-weight:600;color:var(--green);font-size:.9rem}
@@ -225,8 +225,8 @@
 
   /* fertigung (dark) */
   .fertigung{background:var(--green);color:var(--paper)}
-  .fertigung .eyebrow{color:var(--amber)}
-  .fertigung .eyebrow::before{background:var(--amber)}
+  .fertigung .eyebrow{color:var(--gold-l)}
+  .fertigung .eyebrow::before{background:var(--gold-l)}
   .fert-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:54px;align-items:center}
   .fert-figure{border-radius:var(--r);overflow:hidden;border:1px solid var(--hair-dk);aspect-ratio:5/4.6}
   .fert-figure img{width:100%;height:100%;object-fit:cover}
@@ -234,7 +234,7 @@
   .fert-list{list-style:none;padding:0;margin:0 0 2rem}
   .fert-list li{padding:16px 0;border-top:1px dashed var(--hair-dk);display:flex;gap:1rem;color:rgba(236,230,218,.82);font-size:.97rem}
   .fert-list li:last-child{border-bottom:1px dashed var(--hair-dk)}
-  .fert-list .lbl{font-family:"JetBrains Mono",monospace;font-size:.72rem;color:var(--amber);letter-spacing:.08em;min-width:26px;padding-top:.15em}
+  .fert-list .lbl{font-family:"JetBrains Mono",monospace;font-size:.72rem;color:var(--gold-l);letter-spacing:.08em;min-width:26px;padding-top:.15em}
   .fert-feats{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:42px}
   .feat{border:1px solid var(--hair-dk);border-radius:12px;padding:18px 20px}
   .feat b{display:block;color:var(--paper-2);font-family:"Fraunces",serif;font-weight:500;font-size:1.05rem}
@@ -243,7 +243,7 @@
   /* ablauf */
   .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:42px}
   .step{position:relative;padding-top:26px}
-  .step .stitch-no{font-family:"JetBrains Mono",monospace;font-size:.8rem;color:var(--rust);letter-spacing:.1em}
+  .step .stitch-no{font-family:"JetBrains Mono",monospace;font-size:.8rem;color:var(--gold-d);letter-spacing:.1em}
   .step h3{font-size:1.18rem;margin:.5rem 0 .5rem}
   .step p{color:var(--muted);font-size:.93rem}
   .step::before{content:"";position:absolute;top:0;left:0;width:46px;height:2px;background:repeating-linear-gradient(90deg,var(--green) 0 7px,transparent 7px 13px)}
@@ -258,34 +258,34 @@
   .about-card p{color:var(--muted);font-size:.96rem}
   .quality{margin-top:22px;display:flex;flex-direction:column;gap:14px}
   .quality div{display:flex;gap:1rem;align-items:flex-start;font-size:.98rem}
-  .quality .ic{font-size:1.2rem;line-height:1.3}
+  .quality .ic{width:16px;height:2px;background:var(--gold);flex:none;margin-top:.78em}
 
   /* faq */
   .faq{max-width:880px}
   .q{border-top:1px solid var(--hair)}
   .q:last-child{border-bottom:1px solid var(--hair)}
   .q button{width:100%;background:none;border:0;text-align:left;padding:24px 0;display:flex;justify-content:space-between;gap:1rem;align-items:center;cursor:pointer;font-family:"Fraunces",serif;font-size:1.2rem;color:var(--ink)}
-  .q .sign{font-family:"JetBrains Mono",monospace;color:var(--rust);font-size:1.3rem;transition:transform .3s}
+  .q .sign{font-family:"JetBrains Mono",monospace;color:var(--gold-d);font-size:1.3rem;transition:transform .3s}
   .q.open .sign{transform:rotate(45deg)}
   .q .ans{max-height:0;overflow:hidden;transition:max-height .35s ease}
   .q .ans p{color:var(--muted);padding-bottom:24px;max-width:62ch}
 
   /* kontakt */
   .kontakt{background:var(--green);color:var(--paper)}
-  .kontakt .eyebrow{color:var(--amber)}
-  .kontakt .eyebrow::before{background:var(--amber)}
+  .kontakt .eyebrow{color:var(--gold-l)}
+  .kontakt .eyebrow::before{background:var(--gold-l)}
   .kontakt h2{color:var(--paper-2);margin:.8rem 0 1rem}
   .kontakt .lede{color:rgba(236,230,218,.78)}
   .k-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;margin-top:38px;align-items:start}
   .form{display:grid;grid-template-columns:1fr 1fr;gap:16px}
   .form .full{grid-column:1/-1}
-  .field label{display:block;font-family:"JetBrains Mono",monospace;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--amber);margin-bottom:.5rem}
+  .field label{display:block;font-family:"JetBrains Mono",monospace;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-l);margin-bottom:.5rem}
   .field input,.field select,.field textarea{
     width:100%;background:rgba(236,230,218,.06);border:1px solid var(--hair-dk);border-radius:10px;
     padding:.85em 1em;color:var(--paper-2);font-family:inherit;font-size:.96rem;
   }
   .field textarea{min-height:120px;resize:vertical}
-  .field input::placeholder,.field textarea::placeholder{color:rgba(236,230,218,.4)}
+  .field input::placeholder,.field textarea::placeholder{color:rgba(236,230,218,.62)}
   .field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--amber)}
   .form .btn{justify-content:center}
   .k-note{font-size:.82rem;color:rgba(236,230,218,.6);margin-top:1rem}
@@ -326,7 +326,7 @@
     .reveal{opacity:1;transform:none}
   }
   /* hero reassurance line */
-  .hero-assure{display:flex;align-items:center;gap:.55em;margin-top:1.1rem;font-size:.85rem;color:var(--muted);font-family:"JetBrains Mono",monospace}
+  .hero-assure{display:flex;align-items:center;gap:.55em;margin-top:1.1rem;font-size:.92rem;color:var(--muted)}
   .hero-assure .dot{width:7px;height:7px;border-radius:50%;background:var(--amber);box-shadow:0 0 0 3px rgba(221,160,42,.2);flex:none}
   /* trust strip */
   .trust{padding:28px 0;border-bottom:1px solid var(--hair);background:var(--paper-2)}
@@ -380,6 +380,13 @@
 .material-note{margin:16px auto 0;max-width:880px;font-size:1rem;line-height:1.55;color:var(--ink)}
 .material-note a{color:var(--gold-d);text-decoration:underline}
 .material-note + .material-note{margin-top:8px}
+
+/* quick wins 16.11.2026 */
+.skip{position:absolute;left:-999px}.skip:focus{left:8px;top:8px;background:#fff;color:var(--ink);padding:8px 12px;z-index:99;border-radius:6px}
+.hero h1{font-size:clamp(2.4rem,4.7vw,3.7rem)}
+.q .ans a{color:var(--gold-d);text-decoration:underline;text-underline-offset:2px}
+.k-card .row .rl{flex:none;min-width:5.6em;font-size:.82rem;color:rgba(236,230,218,.62);padding-top:.12em}
+.foot .fc a{color:rgba(236,230,218,.85)}
 </style>
 </head>
 <body>
@@ -396,6 +403,7 @@
   </defs>
 </svg>
 
+<a class="skip" href="#top">Skip to content</a>
 <header>
   <div class="wrap nav">
     <a class="brand" href="#top"><span class="mark">B</span>BRODIRA</a>
@@ -420,16 +428,16 @@
   <section class="hero">
     <div class="wrap hero-grid">
       <div>
-        <span class="eyebrow">B2B Embroidery · from 1 piece · Made in Karlsruhe</span>
-        <h1>Personalised
-          <span class="stitch-word">embroidery<svg viewBox="0 0 300 18" preserveAspectRatio="none"><path d="M2,11 Q75,2 150,9 T298,7"/></svg></span>
-          for your business – in any quantity.</h1>
-        <p class="lede">BRODIRA is your partner for personalised embroidery on organic cotton – for baby retail, clinics, hotels and companies. Logos &amp; names, made in Karlsruhe, delivered at scale.</p>
+        <span class="eyebrow">B2B embroidery for companies, practices and clubs</span>
+        <h1>Your logo,
+          <span class="stitch-word">stitched<svg viewBox="0 0 300 18" preserveAspectRatio="none"><path d="M2,11 Q75,2 150,9 T298,7"/></svg></span>
+          in Karlsruhe. First the sample, then the run.</h1>
+        <p class="lede">Personalised embroidery for your business: we embroider polos, shirts, caps and bags with your logo or names. You approve a sample, then we stitch – from 1 piece, usually within 3–5 working days.</p>
         <div class="hero-cta">
-          <a class="btn" href="#kontakt">Request pricing</a>
-          <a class="btn btn--ghost" href="#fertigung">Our production</a>
+          <a class="btn" href="#kontakt">Request a quote</a>
+          <a class="btn btn--ghost" href="https://wa.me/491772647431?text=Hello%20BRODIRA%2C%20I%20am%20interested%20in%20embroidery%3A%20" target="_blank" rel="noopener">Send your logo via WhatsApp</a>
         </div>
-        <p class="hero-assure"><span class="dot"></span>Reply usually within 1 working day · Sample before production</p>
+        <p class="hero-assure"><span class="dot"></span>Quote usually within one working day · Your embroidery file stays on record</p>
       </div>
       <div class="scene">
         <div class="glow"></div>
@@ -586,7 +594,7 @@
           <li><span class="lbl">03</span><span>Framework contracts: fixed terms and predictable dates for recurring orders.</span></li>
           <li><span class="lbl">04</span><span>Neutral B2B delivery: optional white-label straight to your customers or branches.</span></li>
         </ul>
-        <a class="btn btn--light" href="#kontakt">Request a sample &amp; quote</a>
+        <a class="btn btn--light" href="#kontakt">Request a quote</a>
         <div class="fert-feats">
           <div class="feat"><b>Sampling</b><span>Approval before production</span></div>
           <div class="feat"><b>Framework contracts</b><span>Predictable terms</span></div>
@@ -612,10 +620,10 @@
         <div class="step reveal"><span class="stitch-no">04 — Delivery</span><h3>Delivery</h3><p>Ready to ship in your chosen packaging – neutral or with your branding.</p></div>
       </div>
       <div class="stats reveal">
-        <div class="stat"><div class="v">Organic</div><div class="l">cotton blanks</div></div>
-        <div class="stat"><div class="v">3–5</div><div class="l">working days delivery</div></div>
-        <div class="stat"><div class="v">From 1</div><div class="l">piece minimum</div></div>
-        <div class="stat"><div class="v">Own</div><div class="l">Embroidery in Karlsruhe</div></div>
+        <div class="stat"><div class="v">From 1</div><div class="l">piece, no minimum</div></div>
+        <div class="stat"><div class="v">3–5</div><div class="l">working days after approval</div></div>
+        <div class="stat"><div class="v">1</div><div class="l">working day to your quote, usually</div></div>
+        <div class="stat"><div class="v">D-A-CH</div><div class="l">shipping to DE, AT, CH · pickup in Karlsruhe</div></div>
       </div>
     </div>
   </section>
@@ -635,9 +643,9 @@
           <h3>Our standard</h3>
           <p>We treat every order as if it were the only one – whether a single gift or a delivery to your company.</p>
           <div class="quality">
-            <div><span class="ic">🌱</span><span>Organic cotton by Stanley/Stella</span></div>
-            <div><span class="ic">🪡</span><span>Professional machine embroidery – precise &amp; durable</span></div>
-            <div><span class="ic">🇩🇪</span><span>Made in our workshop in Karlsruhe</span></div>
+            <div><span class="ic" aria-hidden="true"></span><span>Organic cotton by Stanley/Stella</span></div>
+            <div><span class="ic" aria-hidden="true"></span><span>Professional machine embroidery – precise &amp; durable</span></div>
+            <div><span class="ic" aria-hidden="true"></span><span>Made in our workshop in Karlsruhe</span></div>
           </div>
         </div>
         <div class="about-card reveal">
@@ -657,7 +665,7 @@
       </div>
       <div class="faq reveal">
         <div class="q open"><button aria-expanded="true">What is your minimum order quantity?<span class="sign">+</span></button><div class="ans"><p>We produce from a single piece to a recurring series. Volume pricing applies from the first bulk order – just tell us your desired quantity.</p></div></div>
-        <div class="q"><button aria-expanded="false">How much does embroidery cost?<span class="sign">+</span></button><div class="ans"><p>The price depends on the design, stitch count, textile and quantity. You receive a transparent quote with volume pricing, usually within one working day.</p></div></div>
+        <div class="q"><button aria-expanded="false">How much does embroidery cost?<span class="sign">+</span></button><div class="ans"><p>The price depends on the design, stitch count, textile and quantity. You receive a transparent quote with volume pricing, usually within one working day. Guide values are on the page <a href="embroidery-price-factors.html">Embroidery price factors</a>.</p></div></div>
         <div class="q"><button aria-expanded="false">Can you embroider our company logo?<span class="sign">+</span></button><div class="ans"><p>Yes. We digitise your logo into an embroidery file and embroider textiles precisely and durably – optionally with neutral (white-label) delivery to your customers.</p></div></div>
         <div class="q"><button aria-expanded="false">Do you offer framework contracts and recurring deliveries?<span class="sign">+</span></button><div class="ans"><p>Yes. For recurring orders we agree fixed terms and predictable delivery dates – with consistent quality from batch to batch.</p></div></div>
         <div class="q"><button aria-expanded="false">Which materials do you use?<span class="sign">+</span></button><div class="ans"><p>Depending on the order, we embroider organic cotton blanks by Stanley/Stella, and other brands such as Russell, SOL'S and Result on request. We use Madeira embroidery threads. The certificates for these materials are listed under “Materials and certificates”.</p></div></div>
@@ -690,11 +698,11 @@
         </form>
         <aside class="k-card reveal">
           <h3>BRODIRA Embroidery Workshop</h3>
-          <div class="row">✉ <a href="mailto:info@brodira.de">info@brodira.de</a></div>
-          <div class="row">☎ <a href="tel:+491772647431">+49 177 2647431</a></div>
-          <div class="row">💬 <a href="https://wa.me/491772647431?text=Hello%20BRODIRA%2C%20I%20am%20interested%20in%20embroidery%3A%20" target="_blank" rel="noopener">Message us on WhatsApp</a></div>
-          <div class="row">📍 Auer Str. 48 A, 76227 Karlsruhe</div>
-          <div class="row">⏱ Reply usually within 1 working day</div>
+          <div class="row"><span class="rl">Email</span><a href="mailto:info@brodira.de">info@brodira.de</a></div>
+          <div class="row"><span class="rl">Phone</span><a href="tel:+491772647431">+49 177 2647431</a></div>
+          <div class="row"><span class="rl">WhatsApp</span><a href="https://wa.me/491772647431?text=Hello%20BRODIRA%2C%20I%20am%20interested%20in%20embroidery%3A%20" target="_blank" rel="noopener">Message us on WhatsApp</a></div>
+          <div class="row"><span class="rl">Address</span>Auer Str. 48 A, 76227 Karlsruhe</div>
+          <div class="row"><span class="rl">Reply</span>usually within 1 working day</div>
         </aside>
       </div>
     </div>
@@ -706,7 +714,8 @@
   <div class="wrap foot">
     <span class="brand">BRODIRA</span>
     <span><a href="stickerei-karlsruhe.html">Embroidery Karlsruhe</a> · <a href="logo-stickerei.html">Logo embroidery</a> · <a href="namensstickerei.html">Name embroidery</a> · <a href="nachhaltigkeit.html">Materials</a></span>
-    <span>B2B Embroidery Workshop · Karlsruhe · organic cotton blanks</span>
+    <span>Stitched in Karlsruhe · embroidery only, from 1 piece</span>
+    <span class="fc">Auer Str. 48 A, 76227 Karlsruhe, Germany · <a href="tel:+491772647431">+49 177 2647431</a> · <a href="mailto:info@brodira.de">info@brodira.de</a></span>
     <span><a href="../impressum.html">Imprint</a> · <a href="../datenschutz.html">Privacy Policy</a></span>
   </div>
 </footer>
@@ -746,7 +755,7 @@
   },{passive:true});
 })();
 </script>
-<script>(function(){var b=document.querySelector('.burger'),n=document.querySelector('.nav-links');if(b&&n){b.addEventListener('click',function(){n.classList.toggle('open');});n.addEventListener('click',function(e){if(e.target.closest('a'))n.classList.remove('open');});}})();</script>
+<script>(function(){var b=document.querySelector('.burger'),n=document.querySelector('.nav-links');if(b&&n){b.setAttribute('aria-expanded','false');b.addEventListener('click',function(){b.setAttribute('aria-expanded',n.classList.toggle('open'));});n.addEventListener('click',function(e){if(e.target.closest('a')){n.classList.remove('open');b.setAttribute('aria-expanded','false');}});}})();</script>
 <script>
 // Anfrageformular: sendet an Make (EU), danach Weiterleitung zur Danke-Seite
 (function(){var f=document.getElementById('kform');if(!f)return;
