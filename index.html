@@ -482,7 +482,7 @@
   .lyr-back {width:62%;height:54%;top:4%;left:2%}
   .lyr-main {width:66%;height:62%;top:20%;left:30%}
   .lyr-front{width:46%;height:42%;top:56%;left:4%}
-  @media(max-width:980px){.scene{min-height:440px;order:-1}.deck{width:min(380px,82vw);height:420px}}
+  @media(max-width:980px){.scene{min-height:440px}.deck{width:min(380px,82vw);height:420px}}
   @media(max-width:620px){.deck{width:300px;height:360px}}
   @media(prefers-reduced-motion:reduce){.deck,.scene .contour{transform:none!important;transition:none}}
 @media(max-width:980px){.nav-links{display:flex;position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;background:var(--paper);border-bottom:1px solid var(--hair);padding:6px 28px 16px;opacity:0;transform:translateY(-8px);pointer-events:none;transition:opacity .2s,transform .2s;z-index:40}.nav-links.open{opacity:1;transform:none;pointer-events:auto}.nav-links a{padding:13px 0;border-bottom:1px solid var(--hair);font-size:1.05rem;color:var(--ink)}}
@@ -517,6 +517,8 @@
 .material-note + .material-note{margin-top:8px}
 
 /* quick wins 16.11.2026 */
+.hero{overflow-x:clip}
+.sec-cta{display:flex;align-items:center;gap:.6rem 1.1rem;flex-wrap:wrap;margin-top:34px;color:var(--muted);font-size:.95rem}
 .skip{position:absolute;left:-999px}.skip:focus{left:8px;top:8px;background:#fff;color:var(--ink);padding:8px 12px;z-index:99;border-radius:6px}
 .hero h1{font-size:clamp(2.4rem,4.7vw,3.7rem)}
 .q .ans a{color:var(--gold-d);text-decoration:underline;text-underline-offset:2px}
@@ -611,8 +613,8 @@
   <!-- TICKER -->
   <div class="ticker" aria-hidden="true">
     <div class="ticker-track">
-      <span>Blanks aus Bio-Baumwolle</span><span>Made in Karlsruhe</span><span>3–5 Werktage Lieferzeit</span><span>Staffelpreise &amp; White-Label</span><span>Logo-Digitalisierung durch uns</span><span>Musterservice vor der Serie</span>
-      <span>Blanks aus Bio-Baumwolle</span><span>Made in Karlsruhe</span><span>3–5 Werktage Lieferzeit</span><span>Staffelpreise &amp; White-Label</span><span>Logo-Digitalisierung durch uns</span><span>Musterservice vor der Serie</span>
+      <span>Blanks aus Bio-Baumwolle</span><span>Gestickt in Karlsruhe</span><span>3–5 Werktage Lieferzeit</span><span>Staffelpreise &amp; White-Label</span><span>Logo-Digitalisierung durch uns</span><span>Musterservice vor der Serie</span>
+      <span>Blanks aus Bio-Baumwolle</span><span>Gestickt in Karlsruhe</span><span>3–5 Werktage Lieferzeit</span><span>Staffelpreise &amp; White-Label</span><span>Logo-Digitalisierung durch uns</span><span>Musterservice vor der Serie</span>
     </div>
   </div>
 
@@ -630,13 +632,13 @@
         <article class="card reveal">
           <span class="num">01</span>
           <h3>Bio-Baumwolle von Stanley/Stella</h3>
-          <p>Blanks aus Bio-Baumwolle von Stanley/Stella – Qualität, die zu Ihrer Marke passt.</p>
+          <p>Blanks aus Bio-Baumwolle von Stanley/Stella, auf Wunsch auch von Russell, SOL'S und Result. Nach Absprache besticken wir Ihre eigene Ware.</p>
           <span class="chip">Blanks aus Bio-Baumwolle</span>
         </article>
         <article class="card reveal">
           <span class="num">02</span>
           <h3>Staffelpreise &amp; Großhandel</h3>
-          <p>Attraktive Konditionen ab der ersten Mengenbestellung – transparent, planbar und fair kalkuliert.</p>
+          <p>Bei größeren Mengen gelten Staffelpreise. Sie stehen im Angebot, die einmalige Einrichtung weisen wir separat aus.</p>
           <span class="chip">Mengenrabatt</span>
         </article>
         <article class="card reveal">
@@ -657,7 +659,7 @@
   <section id="fuer-wen">
     <div class="wrap">
       <div class="sec-head reveal">
-        <span class="eyebrow">Unsere Partner</span>
+        <span class="eyebrow">Branchen</span>
         <h2>Für wen wir arbeiten</h2>
         <p class="lede">Gemacht für Unternehmen, die Wert auf Details legen – vom Einzelstück bis zur wiederkehrenden Serie.</p>
       </div>
@@ -674,7 +676,7 @@
         </div>
         <div class="aud">
           <span class="k">/03</span><h3>Unternehmen &amp; Personal</h3>
-          <p>Hochwertige, persönliche Geschenke und Corporate Wear für Mitarbeitende – ein Detail, das bleibt.</p>
+          <p>Corporate Wear mit Logo und persönliche Geschenke für Mitarbeitende – mit Nachbestellung für neue Kolleg:innen.</p>
           <a class="more" href="unternehmen.html">Mehr erfahren</a>
         </div>
         <div class="aud">
@@ -693,6 +695,7 @@
           <a class="more" href="vereine-teamwear.html">Mehr erfahren</a>
         </div>
       </div>
+      <p class="sec-cta reveal"><a class="btn" href="#kontakt">Angebot anfordern</a><span>Angebot meist innerhalb eines Werktags</span></p>
     </div>
   </section>
 
@@ -713,6 +716,7 @@
         <article class="prod reveal"><div class="ph"><img width="900" height="900" src="assets/hat.webp" alt="Bucket Hat" decoding="async" loading="lazy" srcset="assets/hat-480.webp 480w, assets/hat-800.webp 800w, assets/hat.webp 900w" sizes="(max-width:620px) calc(100vw - 56px), (max-width:980px) calc((100vw - 76px) / 2), 275px"></div><div class="body"><h3>Bucket Hat</h3><p>Sommerlicher Hut für Events, Festivals &amp; Sommer-Aktionen – bestickt mit Logo.</p><span class="sku">Stanley/Stella · STAU893</span></div></article>
       </div>
       <p class="inline-links reveal">Weitere Blanks und Marken auf Anfrage – sagen Sie uns einfach, welches Textil Sie veredeln möchten.</p>
+      <p class="sec-cta reveal"><a class="btn" href="#kontakt">Angebot anfordern</a><span>Angebot meist innerhalb eines Werktags</span></p>
     </div>
   </section>
 
@@ -823,7 +827,7 @@
           <div class="field"><label for="kf2">E-Mail</label><input id="kf2" name="email" type="email" placeholder="name@firma.de" required maxlength="160" autocomplete="email"></div>
           <div class="field"><label for="kf3">Stückzahl</label><input id="kf3" name="stueckzahl" type="text" placeholder="z. B. 50 / Serie" maxlength="60"></div>
           <div class="field full"><label for="kf4">Textil / Leistung</label>
-            <select id="kf4" name="leistung"><option>Logo-Stickerei (Corporate Wear)</option><option>Teamwear / Vereinskleidung</option><option>Polo-Shirts</option><option>Business-Hemden</option><option>Caps / Bucket Hats</option><option>Taschen / Tote Bags</option><option>Babytextilien</option><option>Andere / weiß ich noch nicht</option></select>
+            <select id="kf4" name="leistung"><option value="">Bitte wählen</option><option>Logo-Stickerei (Corporate Wear)</option><option>Teamwear / Vereinskleidung</option><option>Polo-Shirts</option><option>Business-Hemden</option><option>Caps / Bucket Hats</option><option>Taschen / Tote Bags</option><option>Babytextilien</option><option>Andere / weiß ich noch nicht</option></select>
           </div>
           <div class="field full"><label for="kf5">Nachricht</label><textarea id="kf5" name="nachricht" placeholder="Worum geht es? Motiv, Anlass, Wunschtermin …" maxlength="3000"></textarea></div>
           <div style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden" aria-hidden="true"><label>Website</label><input type="text" name="website" tabindex="-1" autocomplete="off"></div>
