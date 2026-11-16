@@ -348,7 +348,7 @@
   .lyr-back {width:62%;height:54%;top:4%;left:2%}
   .lyr-main {width:66%;height:62%;top:20%;left:30%}
   .lyr-front{width:46%;height:42%;top:56%;left:4%}
-  @media(max-width:980px){.scene{min-height:440px;order:-1}.deck{width:min(380px,82vw);height:420px}}
+  @media(max-width:980px){.scene{min-height:440px}.deck{width:min(380px,82vw);height:420px}}
   @media(max-width:620px){.deck{width:300px;height:360px}}
   @media(prefers-reduced-motion:reduce){.deck,.scene .contour{transform:none!important;transition:none}}
 @media(max-width:980px){.nav-links{display:flex;position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;background:var(--paper);border-bottom:1px solid var(--hair);padding:6px 28px 16px;opacity:0;transform:translateY(-8px);pointer-events:none;transition:opacity .2s,transform .2s;z-index:40}.nav-links.open{opacity:1;transform:none;pointer-events:auto}.nav-links a{padding:13px 0;border-bottom:1px solid var(--hair);font-size:1.05rem;color:var(--ink)}}
@@ -382,6 +382,8 @@
 .material-note + .material-note{margin-top:8px}
 
 /* quick wins 16.11.2026 */
+.hero{overflow-x:clip}
+.sec-cta{display:flex;align-items:center;gap:.6rem 1.1rem;flex-wrap:wrap;margin-top:34px;color:var(--muted);font-size:.95rem}
 .skip{position:absolute;left:-999px}.skip:focus{left:8px;top:8px;background:#fff;color:var(--ink);padding:8px 12px;z-index:99;border-radius:6px}
 .hero h1{font-size:clamp(2.4rem,4.7vw,3.7rem)}
 .q .ans a{color:var(--gold-d);text-decoration:underline;text-underline-offset:2px}
@@ -476,8 +478,8 @@
   <!-- TICKER -->
   <div class="ticker" aria-hidden="true">
     <div class="ticker-track">
-      <span>Organic cotton blanks</span><span>Made in Karlsruhe</span><span>3–5 working days delivery</span><span>Volume pricing &amp; white-label</span><span>Logo digitising by us</span><span>Sampling before production</span>
-      <span>Organic cotton blanks</span><span>Made in Karlsruhe</span><span>3–5 working days delivery</span><span>Volume pricing &amp; white-label</span><span>Logo digitising by us</span><span>Sampling before production</span>
+      <span>Organic cotton blanks</span><span>Stitched in Karlsruhe</span><span>3–5 working days delivery</span><span>Volume pricing &amp; white-label</span><span>Logo digitising by us</span><span>Sampling before production</span>
+      <span>Organic cotton blanks</span><span>Stitched in Karlsruhe</span><span>3–5 working days delivery</span><span>Volume pricing &amp; white-label</span><span>Logo digitising by us</span><span>Sampling before production</span>
     </div>
   </div>
 
@@ -495,13 +497,13 @@
         <article class="card reveal">
           <span class="num">01</span>
           <h3>Organic cotton by Stanley/Stella</h3>
-          <p>Organic cotton blanks by Stanley/Stella – quality that fits your brand.</p>
+          <p>Organic cotton blanks by Stanley/Stella, on request also Russell, SOL'S and Result. By arrangement we embroider garments you supply.</p>
           <span class="chip">Organic cotton blanks</span>
         </article>
         <article class="card reveal">
           <span class="num">02</span>
           <h3>Volume pricing &amp; wholesale</h3>
-          <p>Attractive terms from the first bulk order – transparent, predictable and fairly priced.</p>
+          <p>Volume pricing applies to larger quantities. It is listed in your quote, with the one-time setup shown separately.</p>
           <span class="chip">Volume discount</span>
         </article>
         <article class="card reveal">
@@ -522,7 +524,7 @@
   <section id="fuer-wen">
     <div class="wrap">
       <div class="sec-head reveal">
-        <span class="eyebrow">Our clients</span>
+        <span class="eyebrow">Industries</span>
         <h2>Who we work for</h2>
         <p class="lede">Made for businesses that care about detail – from a single piece to a recurring series.</p>
       </div>
@@ -539,7 +541,7 @@
         </div>
         <div class="aud">
           <span class="k">/03</span><h3>Companies &amp; HR</h3>
-          <p>High-quality personal gifts and corporate wear for employees – a detail that lasts.</p>
+          <p>Corporate wear with your logo and personal gifts for employees – with reorders for new colleagues.</p>
           <a class="more" href="unternehmen.html">Learn more</a>
         </div>
         <div class="aud">
@@ -558,6 +560,7 @@
           <a class="more" href="clubs-teamwear.html">Learn more</a>
         </div>
       </div>
+      <p class="sec-cta reveal"><a class="btn" href="#kontakt">Request a quote</a><span>Quote usually within one working day</span></p>
     </div>
   </section>
 
@@ -578,6 +581,7 @@
         <article class="prod reveal"><div class="ph"><img width="900" height="900" src="../assets/hat.webp" alt="Bucket Hat" decoding="async" loading="lazy" srcset="../assets/hat-480.webp 480w, ../assets/hat-800.webp 800w, ../assets/hat.webp 900w" sizes="(max-width:620px) calc(100vw - 56px), (max-width:980px) calc((100vw - 76px) / 2), 275px"></div><div class="body"><h3>Bucket Hat</h3><p>Summer hat for events, festivals &amp; seasonal campaigns – embroidered with a logo.</p><span class="sku">Stanley/Stella · STAU893</span></div></article>
       </div>
       <p class="inline-links reveal">Further blanks and brands on request – just tell us which textile you would like to customise.</p>
+      <p class="sec-cta reveal"><a class="btn" href="#kontakt">Request a quote</a><span>Quote usually within one working day</span></p>
     </div>
   </section>
 
@@ -688,7 +692,7 @@
           <div class="field"><label for="kf2">E-Mail</label><input id="kf2" name="email" type="email" placeholder="name@company.com" required maxlength="160" autocomplete="email"></div>
           <div class="field"><label for="kf3">Quantity</label><input id="kf3" name="stueckzahl" type="text" placeholder="e.g. 50 / series" maxlength="60"></div>
           <div class="field full"><label for="kf4">Textile / service</label>
-            <select id="kf4" name="leistung"><option>Logo embroidery (corporate wear)</option><option>Teamwear / club clothing</option><option>Polo shirts</option><option>Business shirts</option><option>Caps / Bucket Hats</option><option>Bags / tote bags</option><option>Baby textiles</option><option>Other / not sure yet</option></select>
+            <select id="kf4" name="leistung"><option value="">Please choose</option><option>Logo embroidery (corporate wear)</option><option>Teamwear / club clothing</option><option>Polo shirts</option><option>Business shirts</option><option>Caps / Bucket Hats</option><option>Bags / tote bags</option><option>Baby textiles</option><option>Other / not sure yet</option></select>
           </div>
           <div class="field full"><label for="kf5">Message</label><textarea id="kf5" name="nachricht" placeholder="What's it about? Design, occasion, target date …" maxlength="3000"></textarea></div>
           <div style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden" aria-hidden="true"><label>Website</label><input type="text" name="website" tabindex="-1" autocomplete="off"></div>
