@@ -524,6 +524,15 @@
 .q .ans a{color:var(--gold-d);text-decoration:underline;text-underline-offset:2px}
 .k-card .row .rl{flex:none;min-width:5.6em;font-size:.82rem;color:rgba(236,230,218,.62);padding-top:.12em}
 .foot .fc a{color:rgba(236,230,218,.85)}
+/* fact band 17.11.2026 */
+.facts-band{background:var(--green);color:var(--paper-2);padding:26px 0;border-block:1px solid var(--green-line)}
+.facts-band ul{display:grid;grid-template-columns:repeat(4,1fr);list-style:none;margin:0 auto}
+.facts-band li{padding:4px 22px;border-left:2px dashed var(--green-line)}
+.facts-band li:first-child{border-left:0;padding-left:0}
+.facts-band b{display:block;font-family:"Fraunces",serif;font-weight:600;font-size:1.25rem;line-height:1.15}
+.facts-band span{display:block;margin-top:4px;font-size:.92rem;line-height:1.4;color:rgba(246,242,234,.8)}
+.materials{border-top:1px solid var(--hair)}
+@media(max-width:860px){.facts-band ul{grid-template-columns:1fr 1fr;gap:18px 0}.facts-band li:nth-child(odd){border-left:0;padding-left:0}.facts-band li{padding-right:8px}}
 </style>
 </head>
 <body>
@@ -593,30 +602,16 @@
     </div>
   </section>
 
-  <!-- MATERIALIEN UND ZERTIFIKATE -->
-  <section class="trust materials" id="materialien" aria-labelledby="materialien-titel">
-    <div class="wrap trust-wrap">
-      <h2 id="materialien-titel" class="trust-label">Materialien und Zertifikate ausgewählter Hersteller</h2>
-      <div class="trust-logos">
-        <img src="assets/logo-stanleystella.webp" alt="Logo Stanley/Stella" width="730" height="150" loading="lazy" decoding="async">
-        <a href="https://global-standard.org" target="_blank" rel="noopener"><img src="assets/logo-gots.webp" alt="GOTS-Logo – gilt für die Bio-Baumwoll-Blanks von Stanley/Stella" width="152" height="150" loading="lazy" decoding="async"></a>
-        <img src="assets/logo-russell.webp" alt="Logo Russell" width="184" height="150" loading="lazy" decoding="async">
-        <img src="assets/logo-sols.webp" alt="Logo SOL'S" width="274" height="150" loading="lazy" decoding="async">
-        <img src="assets/logo-madeira.webp" alt="Logo Madeira" width="755" height="150" loading="lazy" decoding="async">
-        <a href="https://www.oeko-tex.com" target="_blank" rel="noopener"><img src="assets/logo-oekotex.webp" alt="OEKO-TEX®-Logo – gilt für Materialien von Madeira, Russell und SOL'S laut deren Angaben" width="150" height="150" loading="lazy" decoding="async"></a>
-      </div>
-      <p class="material-note">Wir besticken Blanks von Stanley/Stella (GOTS), Russell und SOL'S (OEKO-TEX®) und sticken mit Garnen von Madeira (OEKO-TEX®).</p>
-      <p class="material-note">Die Zertifikate gehören den Herstellern und gelten für deren Materialien. <a href="nachhaltigkeit.html">Details und Nummern</a></p>
-    </div>
-  </section>
 
-  <!-- TICKER -->
-  <div class="ticker" aria-hidden="true">
-    <div class="ticker-track">
-      <span>Blanks aus Bio-Baumwolle</span><span>Gestickt in Karlsruhe</span><span>3–5 Werktage Lieferzeit</span><span>Staffelpreise &amp; White-Label</span><span>Logo-Digitalisierung durch uns</span><span>Musterservice vor der Serie</span>
-      <span>Blanks aus Bio-Baumwolle</span><span>Gestickt in Karlsruhe</span><span>3–5 Werktage Lieferzeit</span><span>Staffelpreise &amp; White-Label</span><span>Logo-Digitalisierung durch uns</span><span>Musterservice vor der Serie</span>
-    </div>
-  </div>
+  <!-- FAKTEN -->
+  <section class="facts-band" aria-label="Das Wichtigste in Kürze">
+    <ul class="wrap">
+      <li><b>Muster vor der Serie</b><span>Sie sehen die Stickerei und geben sie frei.</span></li>
+      <li><b>Ab 1 Stück</b><span>Vom Einzelteil bis zur Serie, mit Staffelpreisen.</span></li>
+      <li><b>Stickdatei bleibt gespeichert</b><span>Nachbestellen ab 1 Stück, mit derselben Datei.</span></li>
+      <li><b>Abholung in Karlsruhe</b><span>In Durlach nach Absprache, oder versichert nach DE, AT und CH.</span></li>
+    </ul>
+  </section>
 
   <svg class="seam" viewBox="0 0 1400 14" preserveAspectRatio="none" aria-hidden="true"><line class="draw" x1="0" y1="7" x2="1400" y2="7"/></svg>
 
@@ -717,6 +712,23 @@
       </div>
       <p class="inline-links reveal">Weitere Blanks und Marken auf Anfrage – sagen Sie uns einfach, welches Textil Sie veredeln möchten.</p>
       <p class="sec-cta reveal"><a class="btn" href="#kontakt">Angebot anfordern</a><span>Angebot meist innerhalb eines Werktags</span></p>
+    </div>
+  </section>
+
+  <!-- MATERIALIEN UND ZERTIFIKATE -->
+  <section class="trust materials" id="materialien" aria-labelledby="materialien-titel">
+    <div class="wrap trust-wrap">
+      <h2 id="materialien-titel" class="trust-label">Materialien und Zertifikate ausgewählter Hersteller</h2>
+      <div class="trust-logos">
+        <img src="assets/logo-stanleystella.webp" alt="Logo Stanley/Stella" width="730" height="150" loading="lazy" decoding="async">
+        <a href="https://global-standard.org" target="_blank" rel="noopener"><img src="assets/logo-gots.webp" alt="GOTS-Logo – gilt für die Bio-Baumwoll-Blanks von Stanley/Stella" width="152" height="150" loading="lazy" decoding="async"></a>
+        <img src="assets/logo-russell.webp" alt="Logo Russell" width="184" height="150" loading="lazy" decoding="async">
+        <img src="assets/logo-sols.webp" alt="Logo SOL'S" width="274" height="150" loading="lazy" decoding="async">
+        <img src="assets/logo-madeira.webp" alt="Logo Madeira" width="755" height="150" loading="lazy" decoding="async">
+        <a href="https://www.oeko-tex.com" target="_blank" rel="noopener"><img src="assets/logo-oekotex.webp" alt="OEKO-TEX®-Logo – gilt für Materialien von Madeira, Russell und SOL'S laut deren Angaben" width="150" height="150" loading="lazy" decoding="async"></a>
+      </div>
+      <p class="material-note">Wir besticken Blanks von Stanley/Stella (GOTS), Russell und SOL'S (OEKO-TEX®) und sticken mit Garnen von Madeira (OEKO-TEX®).</p>
+      <p class="material-note">Die Zertifikate gehören den Herstellern und gelten für deren Materialien. <a href="nachhaltigkeit.html">Details und Nummern</a></p>
     </div>
   </section>
 
