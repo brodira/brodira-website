@@ -84,3 +84,5 @@ main p a:hover,main li a:hover{color:var(--forest)}
 
 /* numbered steps on audience pages (quick wins 16.11.2026) */
 ol.steps{list-style:none;padding:0;margin:14px 0;counter-reset:st}ol.steps li{counter-increment:st;display:grid;grid-template-columns:34px 1fr;gap:12px;padding:13px 0;border-top:1px solid #e3d8c8}ol.steps li:last-child{border-bottom:1px solid #e3d8c8}ol.steps li::before{content:counter(st,decimal-leading-zero);font-family:var(--mono);font-size:13px;line-height:2;color:#7D633D}ol.steps li>div{min-width:0}
+/* quick wins 3, 17.11.2026 */
+@media(max-width:620px){.btn+.btn{margin-left:0!important;margin-top:8px}.btn:has(+.btn){margin-right:8px}}
