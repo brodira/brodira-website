@@ -86,3 +86,9 @@ main p a:hover,main li a:hover{color:var(--forest)}
 ol.steps{list-style:none;padding:0;margin:14px 0;counter-reset:st}ol.steps li{counter-increment:st;display:grid;grid-template-columns:34px 1fr;gap:12px;padding:13px 0;border-top:1px solid #e3d8c8}ol.steps li:last-child{border-bottom:1px solid #e3d8c8}ol.steps li::before{content:counter(st,decimal-leading-zero);font-family:var(--mono);font-size:13px;line-height:2;color:#7D633D}ol.steps li>div{min-width:0}
 /* quick wins 3, 17.11.2026 */
 @media(max-width:620px){.btn+.btn{margin-left:0!important;margin-top:8px}.btn:has(+.btn){margin-right:8px}}
+/* product strip, 28.11.2026 */
+.tstrip{margin:34px 0 10px}.tstrip h2{margin-bottom:6px}.tstrip>p{color:var(--muted);margin:0 0 14px}
+.tgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}@media(min-width:760px){.tgrid{grid-template-columns:repeat(4,1fr)}}
+.tgrid a{display:flex;flex-direction:column;gap:3px;padding:14px 16px;border:1px solid rgba(24,39,26,.16);border-radius:14px;background:#fff;color:var(--char);text-decoration:none;transition:border-color .15s,transform .15s}
+.tgrid a:hover,.tgrid a:focus-visible{border-color:var(--gold);transform:translateY(-1px)}
+.tgrid b{font-family:var(--serif);font-weight:600;font-size:17px;color:var(--forest)}.tgrid span{font-size:14px;color:var(--muted)}.tgrid b::after{content:"\00a0→";color:var(--gold)}
