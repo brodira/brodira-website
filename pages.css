@@ -92,3 +92,7 @@ ol.steps{list-style:none;padding:0;margin:14px 0;counter-reset:st}ol.steps li{co
 .tgrid a{display:flex;flex-direction:column;gap:3px;padding:14px 16px;border:1px solid rgba(24,39,26,.16);border-radius:14px;background:#fff;color:var(--char);text-decoration:none;transition:border-color .15s,transform .15s}
 .tgrid a:hover,.tgrid a:focus-visible{border-color:var(--gold);transform:translateY(-1px)}
 .tgrid b{font-family:var(--serif);font-weight:600;font-size:17px;color:var(--forest)}.tgrid span{font-size:14px;color:var(--muted)}.tgrid b::after{content:"\00a0→";color:var(--gold)}
+/* WhatsApp in CTA + mobile contact bar, 28.11.2026 */
+.cta-band .btn-primary{background:var(--cream);color:var(--forest)}.cta-band .btn-primary:hover{background:#fff}.cta-band .btn-wa{background:transparent;color:var(--cream);border:1px solid rgba(244,237,227,.55);margin-left:8px}.cta-band .btn-wa:hover{border-color:var(--gold-l);color:var(--gold-l)}
+.mbar{display:none}
+@media(max-width:760px){.mbar{display:flex;gap:8px;position:fixed;left:0;right:0;bottom:0;z-index:60;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:#ECE6DA;border-top:1px solid rgba(24,39,26,.18);box-shadow:0 -6px 18px rgba(24,39,26,.08)}.mbar a{flex:1;text-align:center;padding:12px 8px;border-radius:999px;font-weight:600;font-size:15px;text-decoration:none;font-family:var(--sans)}.mbar a:first-child{background:var(--forest);color:var(--cream)}.mbar a:last-child{border:1px solid rgba(24,39,26,.3);color:var(--forest)}body{padding-bottom:78px}}
